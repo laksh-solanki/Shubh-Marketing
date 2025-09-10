@@ -30,9 +30,9 @@ export default {
         { label: 'Message detail' },
         { label: 'Additional detail' },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>

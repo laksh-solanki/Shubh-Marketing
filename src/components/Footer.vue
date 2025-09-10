@@ -25,7 +25,13 @@
 
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faFacebook, faTwitter, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 library.add(faFacebook, faTwitter, faLinkedin, faInstagram)
@@ -33,8 +39,11 @@ library.add(faFacebook, faTwitter, faLinkedin, faInstagram)
 const icons = [
   { icon: faFacebook, href: 'https://www.facebook.com/share/172vnzY76W/' },
   { icon: faXTwitter, href: 'https://www.twitter.com' },
-  { icon: faLinkedin, href: 'https://www.linkedin.com/in/tej-patel-b104432b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-  { icon: faInstagram, href: 'https://www.instagram.com/_tej_patel_7179_?igsh=enNnMng0YTgyMW5u' }
+  {
+    icon: faLinkedin,
+    href: 'https://www.linkedin.com/in/tej-patel-b104432b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+  },
+  { icon: faInstagram, href: 'https://www.instagram.com/_tej_patel_7179_?igsh=enNnMng0YTgyMW5u' },
 ]
 </script>
 
@@ -42,7 +51,7 @@ const icons = [
 export default {
   name: 'AppFooter',
   components: {
-    FontAwesomeIcon
-  }
+    FontAwesomeIcon,
+  },
 }
 </script>

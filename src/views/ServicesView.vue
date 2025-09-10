@@ -21,7 +21,7 @@
             <v-card-text class="text-center">
               <v-icon size="64" class="service-icon mb-4" color="primary">{{
                 service.icon
-                }}</v-icon>
+              }}</v-icon>
               <h3 class="service-title">{{ service.title }}</h3>
               <p class="service-description">{{ service.description }}</p>
             </v-card-text>
@@ -38,7 +38,7 @@
           <div v-for="feature in features" :key="feature.title" class="feature-item">
             <v-icon size="48" class="feature-icon mb-3" color="secondary">{{
               feature.icon
-              }}</v-icon>
+            }}</v-icon>
             <h3 class="feature-title">{{ feature.title }}</h3>
             <p class="feature-text">{{ feature.text }}</p>
           </div>
@@ -54,7 +54,7 @@
           <div v-for="material in materials" :key="material.name" class="material-item">
             <v-icon size="40" class="material-icon mb-2" color="primary">{{
               material.icon
-              }}</v-icon>
+            }}</v-icon>
             <h4 class="material-name">{{ material.name }}</h4>
             <p class="material-description">{{ material.description }}</p>
           </div>
@@ -67,9 +67,7 @@
       <div class="container text-center">
         <h2 class="cta-title">Ready to Buy Modern Style Tile?</h2>
         <p class="cta-text">Get a free consultation and estimate for your tile project.</p>
-        <v-btn @click="dialog = true" class="cta-button-large" size="x-large">
-          Contact Us
-        </v-btn>
+        <v-btn @click="dialog = true" class="cta-button-large" size="x-large"> Contact Us </v-btn>
       </div>
     </section>
 

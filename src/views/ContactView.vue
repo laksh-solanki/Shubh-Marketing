@@ -3,28 +3,67 @@
     <h1 class="text-center display-3 fw-bold my-3 p-4">Contact Us</h1>
     <v-row>
       <v-col cols="12" sm="7" class="timeline-container">
-        <v-card class="form-container" @touchstart="handleTouchStart" @touchmove="handleTouchMove"
-          @touchend="handleTouchEnd" elevation="2">
+        <v-card
+          class="form-container"
+          @touchstart="handleTouchStart"
+          @touchmove="handleTouchMove"
+          @touchend="handleTouchEnd"
+          elevation="2"
+        >
           <Timeline :currentStep="currentStep" />
           <h2 class="mb-4 text-center">Send Us a Message</h2>
           <div class="form-step" :class="getFormClasses(0)">
             <form @submit.prevent="submitStep1" class="w-100" novalidate>
-              <v-text-field v-model="form.name" label="Name" :rules="[(v) => !!v || 'Name is required']" required
-                outlined dense class="mb-3" clearable />
-              <v-text-field v-model="form.email" label="Email" :rules="[
-                (v) => !!v || 'Email is required',
-                (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
-              ]" required outlined dense class="mb-3" clearable />
-              <v-text-field v-model="form.phone" label="Phone" :rules="[(v) => !!v || 'Phone number is required']"
-                required outlined dense class="mb-3" clearable />
+              <v-text-field
+                v-model="form.name"
+                label="Name"
+                :rules="[(v) => !!v || 'Name is required']"
+                required
+                outlined
+                dense
+                class="mb-3"
+                clearable
+              />
+              <v-text-field
+                v-model="form.email"
+                label="Email"
+                :rules="[
+                  (v) => !!v || 'Email is required',
+                  (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
+                ]"
+                required
+                outlined
+                dense
+                class="mb-3"
+                clearable
+              />
+              <v-text-field
+                v-model="form.phone"
+                label="Phone"
+                :rules="[(v) => !!v || 'Phone number is required']"
+                required
+                outlined
+                dense
+                class="mb-3"
+                clearable
+              />
               <v-btn :loading="loading" type="submit" color="primary" class="mt-4">Next</v-btn>
             </form>
           </div>
 
           <div class="form-step" :class="getFormClasses(1)">
             <form @submit.prevent="submitStep2" class="w-100" novalidate>
-              <v-textarea v-model="form.message" label="Message" :rules="[(v) => !!v || 'Message is required']" required
-                outlined dense rows="4" class="mb-3" clearable />
+              <v-textarea
+                v-model="form.message"
+                label="Message"
+                :rules="[(v) => !!v || 'Message is required']"
+                required
+                outlined
+                dense
+                rows="4"
+                class="mb-3"
+                clearable
+              />
               <div class="d-flex justify-space-between mt-5">
                 <v-btn color="secondary" @click="prevStep">Back</v-btn>
                 <v-btn :loading="loading" type="submit" color="primary">Next</v-btn>
@@ -34,8 +73,17 @@
 
           <div class="form-step" :class="getFormClasses(2)">
             <form @submit.prevent="submitStep3" class="w-100" novalidate>
-              <v-textarea v-model="form.Address" label="Address" :rules="[(v) => !!v || 'Address is required']"
-                clearable required outlined dense rows="4" class="mb-3"></v-textarea>
+              <v-textarea
+                v-model="form.Address"
+                label="Address"
+                :rules="[(v) => !!v || 'Address is required']"
+                clearable
+                required
+                outlined
+                dense
+                rows="4"
+                class="mb-3"
+              ></v-textarea>
               <div class="d-flex justify-space-between mt-5">
                 <v-btn color="secondary" @click="prevStep">Back</v-btn>
                 <v-btn :loading="loading" type="submit" color="primary">Submit</v-btn>
@@ -55,7 +103,9 @@
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title>Address:</v-list-item-title>
-                  <v-list-item-subtitle>123 Tile Street, Flooring City, FC 12345</v-list-item-subtitle>
+                  <v-list-item-subtitle
+                    >123 Tile Street, Flooring City, FC 12345</v-list-item-subtitle
+                  >
                 </v-list-item-content>
               </v-list-item>
               <v-list-item class="mb-2">
@@ -87,7 +137,7 @@
               </v-list-item>
             </v-list>
           </v-card>
-          <v-card class="contact-info pa-4 mb-4" elevation="2"> 
+          <v-card class="contact-info pa-4 mb-4" elevation="2">
             <v-card-title class="text-center justify-center">
               <h2 class="text-h5">Why Contact Us?</h2>
             </v-card-title>
@@ -99,7 +149,9 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>Expert Advice:</v-list-item-title>
-                    <v-list-item-subtitle>Get personalized recommendations for your tiling needs.</v-list-item-subtitle>
+                    <v-list-item-subtitle
+                      >Get personalized recommendations for your tiling needs.</v-list-item-subtitle
+                    >
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item class="mb-2">
@@ -108,7 +160,9 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>Innovative Solutions:</v-list-item-title>
-                    <v-list-item-subtitle>Discover cutting-edge tiling techniques and materials.</v-list-item-subtitle>
+                    <v-list-item-subtitle
+                      >Discover cutting-edge tiling techniques and materials.</v-list-item-subtitle
+                    >
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item>
@@ -117,7 +171,9 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>Dedicated Support:</v-list-item-title>
-                    <v-list-item-subtitle>Our team is here to assist you every step of the way.</v-list-item-subtitle>
+                    <v-list-item-subtitle
+                      >Our team is here to assist you every step of the way.</v-list-item-subtitle
+                    >
                   </v-list-item-content>
                 </v-list-item>
               </v-list>
@@ -133,10 +189,10 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import Timeline from '@/components/Timeline.vue';
-import Success from '@/components/Success.vue';
-import Unsuccess from '@/components/Unsuccess.vue';
+import { ref } from 'vue'
+import Timeline from '@/components/Timeline.vue'
+import Success from '@/components/Success.vue'
+import Unsuccess from '@/components/Unsuccess.vue'
 
 export default {
   components: {
@@ -145,101 +201,99 @@ export default {
     Unsuccess,
   },
   setup() {
-    const currentStep = ref(0);
-    const loading = ref(false);
-    const successRef = ref(null);
-    const unsuccessRef = ref(null);
+    const currentStep = ref(0)
+    const loading = ref(false)
+    const successRef = ref(null)
+    const unsuccessRef = ref(null)
     const form = ref({
       name: '',
       email: '',
       message: '',
       phone: '',
       Address: '',
-    });
-    const touchStartX = ref(0);
-    const touchEndX = ref(0);
+    })
+    const touchStartX = ref(0)
+    const touchEndX = ref(0)
 
     const prevStep = () => {
       if (currentStep.value > 0) {
-        currentStep.value--;
+        currentStep.value--
       }
-    };
+    }
 
     const handleTouchStart = (e) => {
-      touchStartX.value = e.changedTouches[0].screenX;
-    };
+      touchStartX.value = e.changedTouches[0].screenX
+    }
 
     const handleTouchMove = (e) => {
-      touchEndX.value = e.changedTouches[0].screenX;
-    };
+      touchEndX.value = e.changedTouches[0].screenX
+    }
 
     const handleTouchEnd = () => {
-      const swipeDistance = touchEndX.value - touchStartX.value;
-      const minSwipeDistance = 50; // Minimum distance to be considered a swipe
+      const swipeDistance = touchEndX.value - touchStartX.value
+      const minSwipeDistance = 50 // Minimum distance to be considered a swipe
 
       if (swipeDistance > minSwipeDistance) {
         // Swipe right - go to previous step
-        prevStep();
+        prevStep()
       } else if (swipeDistance < -minSwipeDistance) {
         // Swipe left - go to next step if valid
         if (currentStep.value === 0 && validateStep1()) {
-          currentStep.value = 1;
+          currentStep.value = 1
         } else if (currentStep.value === 1 && form.value.message) {
-          currentStep.value = 2;
+          currentStep.value = 2
         }
       }
-    };
+    }
 
     const getFormClasses = (stepNumber) => {
       return {
         active: currentStep.value === stepNumber,
         prev: currentStep.value > stepNumber,
         'd-none': currentStep.value !== stepNumber,
-      };
-    };
+      }
+    }
 
     const submitStep1 = () => {
-      if (!validateStep1()) return;
+      if (!validateStep1()) return
 
-      const currentForm = document.querySelector('.form-step.active');
-      currentForm?.classList.add('sliding-out');
+      const currentForm = document.querySelector('.form-step.active')
+      currentForm?.classList.add('sliding-out')
 
       setTimeout(() => {
-        currentStep.value = 1;
-        currentForm?.classList.remove('sliding-out');
-      }, 300);
-    };
+        currentStep.value = 1
+        currentForm?.classList.remove('sliding-out')
+      }, 300)
+    }
 
     const validateStep1 = () => {
       if (!form.value.name) {
         alert('Please enter Name')
-        return false; 
+        return false
+      } else if (!form.value.email || !/.+@.+\..+/.test(form.value.email)) {
+        alert('Please enter valid email')
+        return false
+      } else if (!form.value.phone || !/^\d{10}$/.test(form.value.phone)) {
+        alert('Please enter a valid 10-digit phone number')
+        return false
       }
-      else if (!form.value.email || !/.+@.+\..+/.test(form.value.email)) {
-        alert('Please enter valid email');
-        return false;
-      }
-      else if (!form.value.phone || !/^\d{10}$/.test(form.value.phone)) {
-        alert('Please enter a valid 10-digit phone number');
-        return false;
-      }
-      return true;
-    };
+      return true
+    }
 
     const submitStep2 = () => {
       if (!form.value.message) {
-        alert('Please enter a message.');
-        return;
+        alert('Please enter a message.')
+        return
       }
-      currentStep.value = 2;
-    };
+      currentStep.value = 2
+    }
 
     const submitStep3 = async () => {
       if (!form.value.Address) {
-        alert('Please enter a Address.');
-        return;
+        alert('Please enter a Address.')
+        return
       }
-      loading.value = true;
+      loading.value = true
       try {
         await fetch(
           'https://script.google.com/macros/s/AKfycbxUzeCUDobbTZst7MBVv2Ni4u5y2crybrWdzI-84r9ivhN1AVWEMdeDAR1AAlWu914w/exec',
@@ -248,17 +302,17 @@ export default {
             mode: 'no-cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form.value),
-          }
-        );
-        form.value = { name: '', email: '', message: '', phone: '', Address: '' };
-        currentStep.value = 0;
-        successRef.value?.showSnackbar();
+          },
+        )
+        form.value = { name: '', email: '', message: '', phone: '', Address: '' }
+        currentStep.value = 0
+        successRef.value?.showSnackbar()
       } catch (err) {
-        unsuccessRef.value?.showSnackbar();
+        unsuccessRef.value?.showSnackbar()
       } finally {
-        loading.value = false;
+        loading.value = false
       }
-    };
+    }
 
     return {
       currentStep,
@@ -274,9 +328,9 @@ export default {
       successRef,
       unsuccessRef,
       getFormClasses,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>
@@ -302,7 +356,9 @@ export default {
   width: 100%;
   padding: 2rem;
   overflow: hidden;
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.4s ease-in-out,
+    opacity 0.3s ease-in-out;
   opacity: 0;
   transform: translateX(100%);
 }

@@ -187,8 +187,6 @@ section {
   margin: 1rem;
 }
 
-
-
 /* Why Choose Us Section */
 .why-choose-us-section {
   height: 100%;
@@ -196,8 +194,6 @@ section {
   align-items: center;
   margin: 1rem;
 }
-
-
 
 .feature-item {
   background-color: #f0f0f0;
