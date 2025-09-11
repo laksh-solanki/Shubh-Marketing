@@ -62,7 +62,6 @@
         </v-card>
       </v-col>
     </v-row>
-
     <!-- Product Showcase -->
     <v-row justify="center">
       <v-col cols="12">

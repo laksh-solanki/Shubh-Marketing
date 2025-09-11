@@ -35,29 +35,11 @@ export default {
 <template>
   <v-card class="search-bar-container justify-item-end" max-width="400">
     <v-card-text class="d-flex">
-      <v-btn
-        icon="mdi-magnify"
-        size="small"
-        @click="toggleSearch"
-        class="magnify-btn"
-        elevation="2"
-      ></v-btn>
+      <v-btn icon="mdi-magnify" size="small" @click="toggleSearch" class="magnify-btn" elevation="2"></v-btn>
       <div class="search-input-container" :class="{ 'search-open': isOpen }">
-        <v-text-field
-          v-if="isOpen"
-          v-model="searchText"
-          :loading="loading"
-          density="compact"
-          label="Search Tiles ..."
-          variant="outlined"
-          type="search"
-          hide-details
-          single-line
-          :class="{ focused: isFocused }"
-          @input="onInput"
-          @focus="onFocus"
-          @blur="onBlur"
-        ></v-text-field>
+        <v-text-field v-if="isOpen" v-model="searchText" :loading="loading" density="compact" label="Search Tiles ..."
+          variant="outlined" type="search" hide-details single-line :class="{ focused: isFocused }" @input="onInput"
+          @focus="onFocus" @blur="onBlur"></v-text-field>
       </div>
     </v-card-text>
   </v-card>

@@ -142,24 +142,13 @@ const filteredCards = computed(() => {
       <v-col cols="12" md="3" sm="4" xs="12" v-for="n in 12" :key="n" v-if="loading">
         <v-skeleton-loader type="card, article" class="rounded-4" />
       </v-col>
-      <v-col
-        v-else
-        cols="12"
-        md="3"
-        sm="4"
-        xs="12"
-        v-for="(card, index) in filteredCards"
-        :key="index"
-      >
+      <v-col v-else cols="12" md="3" sm="4" xs="12" v-for="(card, index) in filteredCards" :key="index">
         <TileCards v-bind="card" :selectedName="selectedName" />
       </v-col>
     </v-row>
-    <v-empty-state
-      icon="mdi-magnify"
-      v-if="!loading && filteredCards.length === 0"
+    <v-empty-state icon="mdi-magnify" v-if="!loading && filteredCards.length === 0"
       text="Try adjusting your search terms or filters. Sometimes less specific terms or broader queries can help you find what you're looking for."
-      title="We couldn't find a match."
-    ></v-empty-state>
+      title="We couldn't find a match."></v-empty-state>
   </section>
 </template>
 

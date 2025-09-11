@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="card h-100 bg-dark text-white border-secondary"
-    @mouseover="isHovered = true"
-    @mouseleave="isHovered = false"
-  >
+  <div class="card h-100 bg-dark text-white border-secondary" @mouseover="isHovered = true"
+    @mouseleave="isHovered = false">
     <img :src="imageSrc" class="card-img-top" :alt="title" />
     <div class="card-body">
       <h5 class="card-title" @click="copyTitle(title)">{{ title }}</h5>

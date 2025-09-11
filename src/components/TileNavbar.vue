@@ -16,11 +16,8 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(item, index) in ceramicItems"
-              :key="index"
-              @click.stop="$emit('name-selected', item.title)"
-            >
+            <v-list-item v-for="(item, index) in ceramicItems" :key="index"
+              @click.stop="$emit('name-selected', item.title)">
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -35,11 +32,8 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(item, index) in porcelainItems"
-              :key="index"
-              @click.stop="$emit('name-selected', item.title)"
-            >
+            <v-list-item v-for="(item, index) in porcelainItems" :key="index"
+              @click.stop="$emit('name-selected', item.title)">
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -54,11 +48,8 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(item, index) in flooringItems"
-              :key="index"
-              @click.stop="$emit('name-selected', item.title)"
-            >
+            <v-list-item v-for="(item, index) in flooringItems" :key="index"
+              @click.stop="$emit('name-selected', item.title)">
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -73,11 +64,7 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(item, index) in stoneItems"
-              :key="index"
-              @click="$emit('name-selected', item.title)"
-            >
+            <v-list-item v-for="(item, index) in stoneItems" :key="index" @click="$emit('name-selected', item.title)">
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -98,11 +85,7 @@
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" title="Ceramic Tiles"></v-list-item>
         </template>
-        <v-list-item
-          v-for="(item, index) in ceramicItems"
-          :key="index"
-          @click="$emit('name-selected', item.title)"
-        >
+        <v-list-item v-for="(item, index) in ceramicItems" :key="index" @click="$emit('name-selected', item.title)">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list-group>
@@ -111,11 +94,7 @@
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" title="Porcelain Tiles"></v-list-item>
         </template>
-        <v-list-item
-          v-for="(item, index) in porcelainItems"
-          :key="index"
-          @click="$emit('name-selected', item.title)"
-        >
+        <v-list-item v-for="(item, index) in porcelainItems" :key="index" @click="$emit('name-selected', item.title)">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list-group>
@@ -124,11 +103,7 @@
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" title="Flooring Types"></v-list-item>
         </template>
-        <v-list-item
-          v-for="(item, index) in flooringItems"
-          :key="index"
-          @click="$emit('name-selected', item.title)"
-        >
+        <v-list-item v-for="(item, index) in flooringItems" :key="index" @click="$emit('name-selected', item.title)">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list-group>
@@ -137,11 +112,7 @@
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" title="Natural Stone"></v-list-item>
         </template>
-        <v-list-item
-          v-for="(item, index) in stoneItems"
-          :key="index"
-          @click="$emit('name-selected', item.title)"
-        >
+        <v-list-item v-for="(item, index) in stoneItems" :key="index" @click="$emit('name-selected', item.title)">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list-group>

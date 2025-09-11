@@ -2,9 +2,8 @@
   <v-app-bar app height="70" light elevation="2">
     <v-container class="d-flex align-center">
       <v-toolbar-title>
-        <router-link class="navbar-brand w-100" to="/"
-          ><img src="@/assets/main_logo.png" class="rounded-4" width="100" alt="Accurx Logo"
-        /></router-link>
+        <router-link class="navbar-brand w-100" to="/"><img src="@/assets/main_logo.png" class="rounded-4" width="100"
+            alt="Accurx Logo" /></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="d-none d-md-flex align-center">
@@ -74,7 +73,7 @@ export default {
       get() {
         return this.$route.path.substring(1) || 'home'
       },
-      set() {},
+      set() { },
     },
     isMobile() {
       return this.$vuetify.display.mdAndDown

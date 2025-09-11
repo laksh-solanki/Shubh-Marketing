@@ -14,10 +14,7 @@ export default {
     <!-- Hero Section -->
     <v-parallax
       src="https://media.istockphoto.com/id/1312314989/vector/white-metro-tiles-seamless-background-subway-brick-horizontal-pattern-for-kitchen-bathroom.jpg?s=612x612&w=0&k=20&c=IW3b5rLojeThvsgWJP5awMQ8uBjHsYbZOlTHFglytcY="
-      class="sec"
-      height="665"
-      width="1600"
-    >
+      class="sec" height="665" width="1600">
       <section class="hero-section">
         <div class="hero-content">
           <h1 class="hero-title">Elevate Your Space with Premium Flooring Solutions</h1>
@@ -34,27 +31,14 @@ export default {
       <h2 class="section-title">Our Diverse Flooring Collections</h2>
       <v-row justify="center" align="stretch" dense>
         <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
-          <TileCard
-            v-if="index === 0"
-            imageSrc="/Photos/Til-1.jpeg"
-            title="Elegant Ceramic Tiles"
+          <TileCard v-if="index === 0" imageSrc="/Photos/Til-1.jpeg" title="Elegant Ceramic Tiles"
             description="Versatile and robust, ideal for both residential and commercial applications."
-            price="$2.50/sq ft"
-          />
-          <TileCard
-            v-else-if="index === 1"
-            imageSrc="/Photos/Til-2.avif"
-            title="Durable Porcelain Tiles"
-            description="Highly resistant to wear and moisture, perfect for high-traffic areas."
-            price="$3.00/sq ft"
-          />
-          <TileCard
-            v-else
-            imageSrc="/Photos/Til-3.webp"
-            title="Comfortable Vinyl Flooring"
+            price="$2.50/sq ft" />
+          <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-2.avif" title="Durable Porcelain Tiles"
+            description="Highly resistant to wear and moisture, perfect for high-traffic areas." price="$3.00/sq ft" />
+          <TileCard v-else imageSrc="/Photos/Til-3.webp" title="Comfortable Vinyl Flooring"
             description="Affordable, easy to maintain, and comfortable underfoot price and design."
-            price="$1.75/sq ft"
-          />
+            price="$1.75/sq ft" />
         </v-col>
       </v-row>
     </section>
@@ -120,9 +104,9 @@ section {
 .hero-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  text-align: center;
+  text-align: start;
   min-height: 82vh;
   background-color: transparent;
   color: #000000;
@@ -151,7 +135,6 @@ section {
 }
 
 .professional-button {
-  background-color: #e0e0e0;
   border-radius: 50px;
   box-shadow:
     inset 4px 4px 10px #bcbcbc,

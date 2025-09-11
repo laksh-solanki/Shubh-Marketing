@@ -1,12 +1,8 @@
 <template>
   <div class="timeline-container">
     <div class="timeline">
-      <div
-        v-for="(step, index) in steps"
-        :key="index"
-        class="timeline-step"
-        :class="{ active: index <= currentStep, completed: index < currentStep }"
-      >
+      <div v-for="(step, index) in steps" :key="index" class="timeline-step"
+        :class="{ active: index <= currentStep, completed: index < currentStep }">
         <div class="timeline-circle">{{ index + 1 }}</div>
         <div class="timeline-label">{{ step.label }}</div>
       </div>

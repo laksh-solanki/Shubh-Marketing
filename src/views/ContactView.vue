@@ -3,67 +3,28 @@
     <h1 class="text-center display-3 fw-bold my-3 p-4">Contact Us</h1>
     <v-row>
       <v-col cols="12" sm="7" class="timeline-container">
-        <v-card
-          class="form-container"
-          @touchstart="handleTouchStart"
-          @touchmove="handleTouchMove"
-          @touchend="handleTouchEnd"
-          elevation="2"
-        >
+        <v-card class="form-container" @touchstart="handleTouchStart" @touchmove="handleTouchMove"
+          @touchend="handleTouchEnd" elevation="2">
           <Timeline :currentStep="currentStep" />
           <h2 class="mb-4 text-center">Send Us a Message</h2>
           <div class="form-step" :class="getFormClasses(0)">
             <form @submit.prevent="submitStep1" class="w-100" novalidate>
-              <v-text-field
-                v-model="form.name"
-                label="Name"
-                :rules="[(v) => !!v || 'Name is required']"
-                required
-                outlined
-                dense
-                class="mb-3"
-                clearable
-              />
-              <v-text-field
-                v-model="form.email"
-                label="Email"
-                :rules="[
-                  (v) => !!v || 'Email is required',
-                  (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
-                ]"
-                required
-                outlined
-                dense
-                class="mb-3"
-                clearable
-              />
-              <v-text-field
-                v-model="form.phone"
-                label="Phone"
-                :rules="[(v) => !!v || 'Phone number is required']"
-                required
-                outlined
-                dense
-                class="mb-3"
-                clearable
-              />
+              <v-text-field v-model="form.name" label="Name" :rules="[(v) => !!v || 'Name is required']" required
+                outlined dense class="mb-3" clearable />
+              <v-text-field v-model="form.email" label="Email" :rules="[
+                (v) => !!v || 'Email is required',
+                (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
+              ]" required outlined dense class="mb-3" clearable />
+              <v-text-field v-model="form.phone" label="Phone" :rules="[(v) => !!v || 'Phone number is required']"
+                required outlined dense class="mb-3" clearable />
               <v-btn :loading="loading" type="submit" color="primary" class="mt-4">Next</v-btn>
             </form>
           </div>
 
           <div class="form-step" :class="getFormClasses(1)">
             <form @submit.prevent="submitStep2" class="w-100" novalidate>
-              <v-textarea
-                v-model="form.message"
-                label="Message"
-                :rules="[(v) => !!v || 'Message is required']"
-                required
-                outlined
-                dense
-                rows="4"
-                class="mb-3"
-                clearable
-              />
+              <v-textarea v-model="form.message" label="Message" :rules="[(v) => !!v || 'Message is required']" required
+                outlined dense rows="4" class="mb-3" clearable />
               <div class="d-flex justify-space-between mt-5">
                 <v-btn color="secondary" @click="prevStep">Back</v-btn>
                 <v-btn :loading="loading" type="submit" color="primary">Next</v-btn>
@@ -73,17 +34,8 @@
 
           <div class="form-step" :class="getFormClasses(2)">
             <form @submit.prevent="submitStep3" class="w-100" novalidate>
-              <v-textarea
-                v-model="form.Address"
-                label="Address"
-                :rules="[(v) => !!v || 'Address is required']"
-                clearable
-                required
-                outlined
-                dense
-                rows="4"
-                class="mb-3"
-              ></v-textarea>
+              <v-textarea v-model="form.Address" label="Address" :rules="[(v) => !!v || 'Address is required']"
+                clearable required outlined dense rows="4" class="mb-3"></v-textarea>
               <div class="d-flex justify-space-between mt-5">
                 <v-btn color="secondary" @click="prevStep">Back</v-btn>
                 <v-btn :loading="loading" type="submit" color="primary">Submit</v-btn>
@@ -103,9 +55,7 @@
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title>Address:</v-list-item-title>
-                  <v-list-item-subtitle
-                    >123 Tile Street, Flooring City, FC 12345</v-list-item-subtitle
-                  >
+                  <v-list-item-subtitle>123 Tile Street, Flooring City, FC 12345</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
               <v-list-item class="mb-2">
@@ -149,9 +99,7 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>Expert Advice:</v-list-item-title>
-                    <v-list-item-subtitle
-                      >Get personalized recommendations for your tiling needs.</v-list-item-subtitle
-                    >
+                    <v-list-item-subtitle>Get personalized recommendations for your tiling needs.</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item class="mb-2">
@@ -160,9 +108,7 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>Innovative Solutions:</v-list-item-title>
-                    <v-list-item-subtitle
-                      >Discover cutting-edge tiling techniques and materials.</v-list-item-subtitle
-                    >
+                    <v-list-item-subtitle>Discover cutting-edge tiling techniques and materials.</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item>
@@ -171,9 +117,7 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <v-list-item-title>Dedicated Support:</v-list-item-title>
-                    <v-list-item-subtitle
-                      >Our team is here to assist you every step of the way.</v-list-item-subtitle
-                    >
+                    <v-list-item-subtitle>Our team is here to assist you every step of the way.</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
               </v-list>

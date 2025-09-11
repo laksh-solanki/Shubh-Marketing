@@ -1,8 +1,8 @@
 <template>
   <v-footer class="text-center d-flex flex-column ga-2 py-4" color="indigo-lighten-1">
-    <div class="d-flex ga-3">
-      <a v-for="item in icons" :key="item.href" :href="item.href" target="_blank" class="mx-2">
-        <font-awesome-icon :icon="item.icon" size="2x" />
+    <div class="d-flex ga-3 rounded-circle justify-center mb-2 ">
+      <a v-for="item in icons" :key="item.href" :href="item.href" target="_blank" class="mx-2 text-decoration-none">
+        <font-awesome-icon :icon="item.icon" class="fs-5 text-black" />
       </a>
     </div>
 

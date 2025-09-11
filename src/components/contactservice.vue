@@ -61,71 +61,44 @@ function clear() {
 
     <div class="mb-3">
       <label for="nameInput" class="form-label">Name</label>
-      <input
-        type="text"
-        class="form-control"
-        :class="{ 'is-invalid': v$.name.$error, 'is-valid': submitted && !v$.name.$error }"
-        id="nameInput"
-        v-model="state.name"
-        @blur="v$.name.$touch"
-        @input="v$.name.$touch"
-        required
-      />
+      <input type="text" class="form-control"
+        :class="{ 'is-invalid': v$.name.$error, 'is-valid': submitted && !v$.name.$error }" id="nameInput"
+        v-model="state.name" @blur="v$.name.$touch" @input="v$.name.$touch" required />
       <div class="invalid-feedback">
-        {{ v$.name.$errors.map((e) => e.$message).join(', ') }}
+        {{v$.name.$errors.map((e) => e.$message).join(', ')}}
       </div>
     </div>
 
     <div class="mb-3">
       <label for="emailInput" class="form-label">E-mail</label>
-      <input
-        type="email"
-        class="form-control"
-        :class="{ 'is-invalid': v$.email.$error, 'is-valid': submitted && !v$.email.$error }"
-        id="emailInput"
-        v-model="state.email"
-        @blur="v$.email.$touch"
-        @input="v$.email.$touch"
-        required
-      />
+      <input type="email" class="form-control"
+        :class="{ 'is-invalid': v$.email.$error, 'is-valid': submitted && !v$.email.$error }" id="emailInput"
+        v-model="state.email" @blur="v$.email.$touch" @input="v$.email.$touch" required />
       <div class="invalid-feedback">
-        {{ v$.email.$errors.map((e) => e.$message).join(', ') }}
+        {{v$.email.$errors.map((e) => e.$message).join(', ')}}
       </div>
     </div>
 
     <div class="mb-3">
       <label for="selectInput" class="form-label">Item</label>
-      <select
-        class="form-select"
-        :class="{ 'is-invalid': v$.select.$error, 'is-valid': submitted && !v$.select.$error }"
-        id="selectInput"
-        v-model="state.select"
-        @blur="v$.select.$touch"
-        @change="v$.select.$touch"
-        required
-      >
+      <select class="form-select"
+        :class="{ 'is-invalid': v$.select.$error, 'is-valid': submitted && !v$.select.$error }" id="selectInput"
+        v-model="state.select" @blur="v$.select.$touch" @change="v$.select.$touch" required>
         <option value="" disabled>Select an item</option>
         <option v-for="item in items" :key="item" :value="item">{{ item }}</option>
       </select>
       <div class="invalid-feedback">
-        {{ v$.select.$errors.map((e) => e.$message).join(', ') }}
+        {{v$.select.$errors.map((e) => e.$message).join(', ')}}
       </div>
     </div>
 
     <div class="form-check mb-3">
-      <input
-        type="checkbox"
-        class="form-check-input"
-        :class="{ 'is-invalid': v$.checkbox.$error, 'is-valid': submitted && !v$.checkbox.$error }"
-        id="checkboxInput"
-        v-model="state.checkbox"
-        @blur="v$.checkbox.$touch"
-        @change="v$.checkbox.$touch"
-        required
-      />
+      <input type="checkbox" class="form-check-input"
+        :class="{ 'is-invalid': v$.checkbox.$error, 'is-valid': submitted && !v$.checkbox.$error }" id="checkboxInput"
+        v-model="state.checkbox" @blur="v$.checkbox.$touch" @change="v$.checkbox.$touch" required />
       <label class="form-check-label" for="checkboxInput">Do you agree?</label>
       <div class="invalid-feedback">
-        {{ v$.checkbox.$errors.map((e) => e.$message).join(', ') }}
+        {{v$.checkbox.$errors.map((e) => e.$message).join(', ')}}
       </div>
     </div>
     <div class="d-flex justify-content-center">

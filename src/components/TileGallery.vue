@@ -1,11 +1,6 @@
 <template>
   <div class="slider-wrapper" @mouseenter="pauseAutoPlay" @mouseleave="startAutoPlay">
-    <div
-      class="slider-container"
-      @touchstart="onTouchStart"
-      @touchmove="onTouchMove"
-      @touchend="onTouchEnd"
-    >
+    <div class="slider-container" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
       <div class="slider-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
         <div v-for="(tile, index) in tiles" :key="index" class="slider-slide">
           <div class="slide-content">
@@ -19,13 +14,8 @@
       </div>
     </div>
     <div class="slider-indicators">
-      <span
-        v-for="(tile, index) in tiles"
-        :key="index"
-        class="indicator"
-        :class="{ active: index === currentIndex }"
-        @click="goToSlide(index)"
-      ></span>
+      <span v-for="(tile, index) in tiles" :key="index" class="indicator" :class="{ active: index === currentIndex }"
+        @click="goToSlide(index)"></span>
     </div>
   </div>
 </template>
@@ -236,16 +226,20 @@ export default {
   .slider-wrapper {
     height: 500px;
   }
+
   .slider-container {
     height: 400px;
   }
+
   .slide-content {
     width: 90%;
     height: 85%;
   }
+
   .slide-info h3 {
     font-size: 1.3rem;
   }
+
   .slide-info p {
     font-size: 0.9rem;
   }
@@ -255,17 +249,21 @@ export default {
   .slider-wrapper {
     height: 400px;
   }
+
   .slider-container {
     height: 300px;
   }
+
   .slide-content {
     width: 95%;
     height: 90%;
     padding: 15px;
   }
+
   .slide-info h3 {
     font-size: 1.1rem;
   }
+
   .slide-info p {
     font-size: 0.8rem;
   }

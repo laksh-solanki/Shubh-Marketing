@@ -44,22 +44,11 @@ export default {
 <template>
   <div>
     <v-hover v-slot="{ isHovering, props }">
-      <v-card
-        class="mx-auto rounded-4"
-        color="grey-lighten-4"
-        min-height="400"
-        v-bind="props"
-        :class="{ 'selected-card': title === selectedName }"
-        elevation="1"
-        max-width="360"
-      >
+      <v-card class="mx-auto rounded-4" color="grey-lighten-4" min-height="400" v-bind="props"
+        :class="{ 'selected-card': title === selectedName }" elevation="1" max-width="360">
         <v-img :aspect-ratio="16 / 9" :src="imageSrc" cover>
           <v-expand-transition>
-            <div
-              v-if="isHovering"
-              class="d-flex bg-white v-card--reveal text-h2"
-              style="height: 100%"
-            >
+            <div v-if="isHovering" class="d-flex bg-white v-card--reveal text-h2" style="height: 100%">
               {{ price }}
             </div>
           </v-expand-transition>
