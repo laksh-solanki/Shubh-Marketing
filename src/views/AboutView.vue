@@ -1,81 +1,47 @@
-<template>
-  <v-container fluid class="about-page">
-    <!-- Hero Section -->
-    <v-row justify="center" align="center" class="hero-section">
-      <v-col cols="12" md="7">
-        <h1 class="hero-title">Shubh Marketing</h1>
-        <p class="hero-subtitle">
-          Leading provider of high-quality ceramic tiles for residential and commercial projects.
-        </p>
-      </v-col>
-    </v-row>
-
-    <!-- About Us Section -->
-    <v-row justify="center">
-      <v-col cols="12" md="8">
-        <v-card class="about-card" elevation="4">
-          <v-card-title class="text-h4">Our Story</v-card-title>
-          <v-card-text>
-            <p>
-              At Accurx, we have been dedicated to excellence in tile manufacturing for over a
-              decade. Our commitment to quality, innovation, and customer satisfaction has made us a
-              trusted name in the industry.
-            </p>
-            <p>
-              We offer a wide range of ceramic tiles that combine durability, style, and
-              affordability, suitable for any space.
-            </p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- Values Section -->
-    <v-row justify="center">
-      <v-col cols="12" md="8">
-        <v-card class="values-card" elevation="4">
-          <v-card-title class="text-h4">Our Core Values</v-card-title>
-          <v-expansion-panels>
-            <v-expansion-panel>
-              <v-expansion-panel-title>Integrity</v-expansion-panel-title>
-              <v-expansion-panel-text>
-                We uphold the highest standards of integrity in all our actions, fostering trust and
-                transparency with our clients and partners.
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-            <v-expansion-panel>
-              <v-expansion-panel-title>Quality</v-expansion-panel-title>
-              <v-expansion-panel-text>
-                We are committed to delivering products and services of exceptional quality,
-                ensuring durability, performance, and aesthetic appeal.
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-            <v-expansion-panel>
-              <v-expansion-panel-title>Client Focus</v-expansion-panel-title>
-              <v-expansion-panel-text>
-                Our clients are at the heart of everything we do. We strive to understand their
-                needs and exceed their expectations through personalized solutions and dedicated
-                support.
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-          </v-expansion-panels>
-        </v-card>
-      </v-col>
-    </v-row>
-    <!-- Product Showcase -->
-    <v-row justify="center">
-      <v-col cols="12">
-        <v-card class="showcase-card" elevation="4">
-          <v-card-title class="text-h4 text-center">Our Tile Collection</v-card-title>
-          <TileGallery />
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-</template>
-
 <script setup>
 import TileGallery from '@/components/TileGallery.vue'
+import { ref } from 'vue'
+
+const tileCategories = ref([
+  {
+    name: 'Ceramic Tiles',
+    image: './Photos/Til-2.png',
+    description: 'Durable and versatile tiles perfect for indoor applications'
+  },
+  {
+    name: 'Porcelain Tiles',
+    image: './Photos/Til-3.webp',
+    description: 'Premium quality tiles suitable for both indoor and outdoor use'
+  },
+  {
+    name: 'Designer Tiles',
+    image: './Photos/Til-4.jpg',
+    description: 'Exclusive patterns and designs for unique spaces and versatile tiles'
+  }
+])
+
+const installationSteps = ref([
+  {
+    title: 'Consultation',
+    description: 'Free site visit and requirements analysis',
+    color: 'primary'
+  },
+  {
+    title: 'Planning',
+    description: 'Detailed layout and material planning',
+    color: 'info'
+  },
+  {
+    title: 'Installation',
+    description: 'Professional installation by certified experts',
+    color: 'success'
+  },
+  {
+    title: 'Quality Check',
+    description: 'Final inspection and quality assurance',
+    color: 'warning'
+  }
+])
 
 defineOptions({
   name: 'AboutPage',
@@ -85,21 +51,112 @@ defineOptions({
 })
 </script>
 
+<template>
+  <div class="about-page">
+    <!-- Hero Section -->
+    <v-row justify="center" align="center" class="hero-section">
+      <v-col cols="12" md="7">
+        <h1 class="hero-title">Premium Tile Solutions</h1>
+        <p class="hero-subtitle">
+          Your trusted partner for exclusive ceramic, porcelain, and designer tiles
+        </p>
+      </v-col>
+    </v-row>
+
+    <!-- Tile Experience Section -->
+    <v-row justify="center">
+      <v-col cols="12" md="10">
+        <v-card class="experience-card" elevation="2">
+          <v-card-title class="text-h4">20+ Years in Tile Excellence</v-card-title>
+          <v-card-text>
+            <v-row>
+              <v-col cols="12" md="4" class="text-center">
+                <v-icon size="48" color="primary">mdi-package-variant-closed</v-icon>
+                <h3 class="stat-number">10000+</h3>
+                <p class="stat-label">Tiles Delivered</p>
+              </v-col>
+              <v-col cols="12" md="4" class="text-center">
+                <v-icon size="48" color="primary">mdi-account-group</v-icon>
+                <h3 class="stat-number">5000+</h3>
+                <p class="stat-label">Happy Customers</p>
+              </v-col>
+              <v-col cols="12" md="4" class="text-center">
+                <v-icon size="48" color="primary">mdi-store</v-icon>
+                <h3 class="stat-number">50+</h3>
+                <p class="stat-label">Showrooms</p>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Tile Categories -->
+    <v-row justify="center">
+      <v-col cols="12" md="10">
+        <v-card class="categories-card" elevation="4">
+          <v-card-title class="text-h4 mb-3">Our Tile Categories</v-card-title>
+          <v-row>
+            <v-col v-for="category in tileCategories" :key="category.name" cols="12" md="4">
+              <v-card class="category-item" elevation="2">
+                <v-img :src="category.image" height="200" cover></v-img>
+                <v-card-title>{{ category.name }}</v-card-title>
+                <v-card-text>{{ category.description }}</v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Tile Installation Guide -->
+    <v-row justify="center">
+      <v-col cols="12" md="10">
+        <v-card class="guide-card" elevation="4">
+          <v-card-title class="text-h4">Installation Services</v-card-title>
+          <v-card-text>
+            <v-timeline density="compact">
+              <v-timeline-item v-for="step in installationSteps" :key="step.title" :dot-color="step.color" size="small">
+                <div class="installation-step">
+                  <h3>{{ step.title }}</h3>
+                  <p>{{ step.description }}</p>
+                </div>
+              </v-timeline-item>
+            </v-timeline>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Product Showcase -->
+    <v-row justify="center">
+      <v-col cols="12" md="10" sm="12">
+        <v-card class="showcase-card" elevation="2">
+          <TileGallery />
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+
+
 <style scoped>
 .about-page {
-  padding: 2rem 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 .hero-section {
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 4rem 2rem;
+  padding: 100px 0;
   text-align: center;
+  margin: 1rem;
   margin-bottom: 2rem;
+  border-radius: 12px;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -109,10 +166,40 @@ defineOptions({
   opacity: 0.9;
 }
 
-.about-card,
-.values-card,
+.experience-card,
+.categories-card,
+.guide-card,
 .showcase-card {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding: 2rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #6a11cb;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.category-item {
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+}
+
+.installation-step {
+  padding: 0.5rem 0;
+}
+
+.installation-step h3 {
+  color: #6a11cb;
+  margin-bottom: 0.5rem;
 }
 </style>

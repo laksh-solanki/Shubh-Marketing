@@ -1,7 +1,41 @@
+<script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+library.add(faFacebook, faTwitter, faLinkedin, faInstagram)
+
+const icons = [
+  { icon: faFacebook, href: 'https://www.facebook.com/share/172vnzY76W/' },
+  { icon: faXTwitter, href: 'https://www.twitter.com' },
+  { icon: faLinkedin, href: 'https://www.linkedin.com/in/tej-patel-b104432b9' },
+  { icon: faInstagram, href: 'https://www.instagram.com/_tej_patel_7179_' },
+]
+
+const quickLinks = [
+  { title: 'Home', path: '/', icon: 'mdi-home' },
+  { title: 'About', path: '/about', icon: 'mdi-information' },
+  { title: 'Services', path: '/services', icon: 'mdi-briefcase' },
+  { title: 'Contact', path: '/contact', icon: 'mdi-phone' },
+]
+</script>
+
 <template>
   <v-footer class="footer-container">
-    <!-- Main Footer Content -->
     <v-container>
+      <!-- Logo Section -->
+      <div class="d-flex justify-space-between align-center mb-6">
+        <div class="footer-logo">
+          <img src="@/assets/Main_logo.jpeg" alt="Shubh Marketing Logo" class="logo-image" />
+        </div>
+      </div>
+
       <v-row>
         <!-- Company Info -->
         <v-col cols="12" md="4" class="px-4">
@@ -71,34 +105,6 @@
   </v-footer>
 </template>
 
-<script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import {
-  faFacebook,
-  faTwitter,
-  faLinkedin,
-  faInstagram,
-  faXTwitter,
-} from '@fortawesome/free-brands-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-library.add(faFacebook, faTwitter, faLinkedin, faInstagram)
-
-const icons = [
-  { icon: faFacebook, href: 'https://www.facebook.com/share/172vnzY76W/' },
-  { icon: faXTwitter, href: 'https://www.twitter.com' },
-  { icon: faLinkedin, href: 'https://www.linkedin.com/in/tej-patel-b104432b9' },
-  { icon: faInstagram, href: 'https://www.instagram.com/_tej_patel_7179_' },
-]
-
-const quickLinks = [
-  { title: 'Home', path: '/', icon: 'mdi-home' },
-  { title: 'About', path: '/about', icon: 'mdi-information' },
-  { title: 'Services', path: '/services', icon: 'mdi-briefcase' },
-  { title: 'Contact', path: '/contact', icon: 'mdi-phone' },
-]
-</script>
-
 <style scoped>
 .footer-container {
   background: linear-gradient(to right, #1a237e, #3949ab);
@@ -152,5 +158,24 @@ a:hover {
 
 .text-h6 {
   color: #90caf9;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .footer-logo {
+    max-width: 120px;
+    margin: 0 auto 1rem auto;
+  }
 }
 </style>

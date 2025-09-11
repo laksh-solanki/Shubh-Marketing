@@ -1,5 +1,6 @@
 <template>
-  <div class="slider-wrapper" @mouseenter="pauseAutoPlay" @mouseleave="startAutoPlay">
+  <div class="slider-wrapper rounded" @mouseenter="pauseAutoPlay" @mouseleave="startAutoPlay" elevation-20>
+    <v-card-title class="text-h3 text-center">Featured Tiles</v-card-title>
     <div class="slider-container" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
       <div class="slider-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
         <div v-for="(tile, index) in tiles" :key="index" class="slider-slide">
@@ -137,7 +138,6 @@ export default {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 15px;
   overflow: hidden;
 }
 

@@ -1,92 +1,3 @@
-<template>
-  <div class="services-container">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">Our Tile Services</h1>
-        <p class="hero-subtitle">
-          Professional tile installation and flooring solutions for residential and commercial
-          spaces.
-        </p>
-        <v-btn @click="scrollToServices" class="cta-button" size="large"> Explore Services </v-btn>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section" ref="servicesRef">
-      <div class="container">
-        <h2 class="section-title">Tile & Flooring Services</h2>
-        <div class="services-grid">
-          <v-card v-for="service in services" :key="service.id" class="service-card" elevation="4">
-            <v-card-text class="text-center">
-              <v-icon size="64" class="service-icon mb-4" color="primary">{{
-                service.icon
-                }}</v-icon>
-              <h3 class="service-title">{{ service.title }}</h3>
-              <p class="service-description">{{ service.description }}</p>
-            </v-card-text>
-          </v-card>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-      <div class="container">
-        <h2 class="section-title">Why Choose Our Tile Services?</h2>
-        <div class="features-grid">
-          <div v-for="feature in features" :key="feature.title" class="feature-item">
-            <v-icon size="48" class="feature-icon mb-3" color="secondary">{{
-              feature.icon
-              }}</v-icon>
-            <h3 class="feature-title">{{ feature.title }}</h3>
-            <p class="feature-text">{{ feature.text }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Materials Section -->
-    <section class="materials-section">
-      <div class="container">
-        <h2 class="section-title">Materials We Work With</h2>
-        <div class="materials-grid">
-          <div v-for="material in materials" :key="material.name" class="material-item">
-            <v-icon size="40" class="material-icon mb-2" color="primary">{{
-              material.icon
-              }}</v-icon>
-            <h4 class="material-name">{{ material.name }}</h4>
-            <p class="material-description">{{ material.description }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-      <div class="container text-center">
-        <h2 class="cta-title">Ready to Buy Modern Style Tile?</h2>
-        <p class="cta-text">Get a free consultation and estimate for your tile project.</p>
-        <v-btn @click="dialog = true" class="cta-button-large" size="x-large"> Contact Us </v-btn>
-      </div>
-    </section>
-
-    <!-- Contact Dialog -->
-    <v-dialog v-model="dialog" max-width="600px">
-      <v-card>
-        <v-card-title class="text-h5 pb-0 p-3 d-flex justify-end align-center">
-          <v-btn icon @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-card-title>
-        <v-card-text class="p-0">
-          <contactService />
-        </v-card-text>
-      </v-card>
-    </v-dialog>
-  </div>
-</template>
-
 <script>
 import contactService from '@/components/contactservice.vue'
 
@@ -216,6 +127,95 @@ export default {
 }
 </script>
 
+<template>
+  <div class="services-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Our Tile Services</h1>
+        <p class="hero-subtitle">
+          Professional tile installation and flooring solutions for residential and commercial
+          spaces.
+        </p>
+        <v-btn @click="scrollToServices" class="cta-button" size="large"> Explore Services </v-btn>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" ref="servicesRef">
+      <div class="container">
+        <h2 class="section-title">Tile & Flooring Services</h2>
+        <div class="services-grid">
+          <v-card v-for="service in services" :key="service.id" class="service-card" elevation="4">
+            <v-card-text class="text-center">
+              <v-icon size="64" class="service-icon mb-4" color="primary">{{
+                service.icon
+                }}</v-icon>
+              <h3 class="service-title">{{ service.title }}</h3>
+              <p class="service-description">{{ service.description }}</p>
+            </v-card-text>
+          </v-card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title">Why Choose Our Tile Services?</h2>
+        <div class="features-grid">
+          <div v-for="feature in features" :key="feature.title" class="feature-item">
+            <v-icon size="48" class="feature-icon mb-3" color="secondary">{{
+              feature.icon
+              }}</v-icon>
+            <h3 class="feature-title">{{ feature.title }}</h3>
+            <p class="feature-text">{{ feature.text }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="materials-section">
+      <div class="container">
+        <h2 class="section-title">Materials We Work With</h2>
+        <div class="materials-grid">
+          <div v-for="material in materials" :key="material.name" class="material-item">
+            <v-icon size="40" class="material-icon mb-2" color="primary">{{
+              material.icon
+              }}</v-icon>
+            <h4 class="material-name">{{ material.name }}</h4>
+            <p class="material-description">{{ material.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2 class="cta-title">Ready to Buy Modern Style Tile?</h2>
+        <p class="cta-text">Get a free consultation and estimate for your tile project.</p>
+        <v-btn @click="dialog = true" class="cta-button-large" size="x-large"> Contact Us </v-btn>
+      </div>
+    </section>
+
+    <!-- Contact Dialog -->
+    <v-dialog v-model="dialog" max-width="600px">
+      <v-card>
+        <v-card-title class="text-h5 pb-0 p-3 d-flex justify-end align-center">
+          <v-btn icon @click="dialog = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+        <v-card-text class="p-0">
+          <contactService />
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+  </div>
+</template>
+
 <style scoped>
 .services-container {
   font-family: 'Roboto', sans-serif;
@@ -229,6 +229,9 @@ export default {
   padding: 100px 0;
   text-align: center;
   position: relative;
+  z-index: 1;
+  margin: 1rem;
+  border-radius: 12px;
   overflow: hidden;
 }
 

@@ -92,21 +92,62 @@ export default {
       <h2 class="section-title">Why Partner with Us?</h2>
       <v-row justify="center" align="stretch" dense>
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <div class="feature-item">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <v-icon size="48" color="primary">mdi-shield-check</v-icon>
+            </div>
             <h3>Uncompromising Quality</h3>
             <p>We source only the finest materials from reputable global manufacturers.</p>
+            <div class="feature-overlay">
+              <div class="overlay-content">
+                <h4>Quality Assurance</h4>
+                <ul>
+                  <li>Premium Materials</li>
+                  <li>Durability Tested</li>
+                  <li>Quality Certifications</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </v-col>
+
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <div class="feature-item">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <v-icon size="48" color="primary">mdi-tools</v-icon>
+            </div>
             <h3>Expert Installation</h3>
             <p>Our certified professionals ensure a precise and lasting installation.</p>
+            <div class="feature-overlay">
+              <div class="overlay-content">
+                <h4>Installation Benefits</h4>
+                <ul>
+                  <li>Certified Experts</li>
+                  <li>Precise Execution</li>
+                  <li>Timely Completion</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </v-col>
+
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <div class="feature-item">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <v-icon size="48" color="primary">mdi-heart</v-icon>
+            </div>
             <h3>Client Satisfaction</h3>
             <p>Dedicated to exceeding your expectations from selection to project completion.</p>
+            <div class="feature-overlay">
+              <div class="overlay-content">
+                <h4>Our Commitment</h4>
+                <ul>
+                  <li>24/7 Support</li>
+                  <li>Custom Solutions</li>
+                  <li>After-sale Service</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </v-col>
       </v-row>
@@ -145,7 +186,7 @@ section {
 
 /* Hero Section */
 .hero-container {
-  background-color:transparent !important;
+  background-color: transparent !important;
   position: relative;
   margin-bottom: 40px;
   padding: 0%;
@@ -225,31 +266,88 @@ section {
   margin: 1rem;
 }
 
-.feature-item {
-  background-color: #f0f0f0;
-  padding: 1.5rem;
-  border-radius: 8px;
-  height: 250px;
-  align-content: center;
+.feature-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  height: 280px;
+  margin: 10px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-.feature-item:hover {
-  transform: translateY(-5px);
+.feature-card:hover {
+  transform: translateY(-10px);
 }
 
-.feature-item h3 {
-  color: #007bff;
-  margin-bottom: 0.9rem;
-  font-size: 1.6rem;
+.feature-icon {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(25, 118, 210, 0.1);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
 }
 
-.feature-item p {
-  color: #555;
+.feature-card h3 {
+  color: #1976D2;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, #1976D2, #1565C0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  transform: translateY(100%);
+  border-radius: 15px;
+}
+
+.feature-card:hover .feature-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-content {
+  color: white;
+  padding: 2rem;
+}
+
+.overlay-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.overlay-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.overlay-content li {
+  margin: 0.8rem 0;
   font-size: 1rem;
 }
 
@@ -270,6 +368,19 @@ section {
   .professional-button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+  }
+
+  .feature-card {
+    height: 260px;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
   }
 }
 

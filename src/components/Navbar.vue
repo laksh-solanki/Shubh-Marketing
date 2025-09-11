@@ -3,7 +3,7 @@
     <v-container class="d-flex align-center">
       <v-toolbar-title>
         <router-link class="navbar-brand w-100" to="/"><img src="@/assets/Main_logo.jpeg" class="rounded-4" width="110"
-            alt="Accurx Logo" /></router-link>
+            alt="Shubh marketing" /></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="d-none d-md-flex align-center">
@@ -15,9 +15,7 @@
           <v-tab to="/Tile" value="Tile">Tile</v-tab>
         </v-tabs>
       </div>
-      <div class="hamburger-menu d-md-none" 
-           :class="{ 'is-active': drawer }" 
-           @click="drawer = !drawer">
+      <div class="hamburger-menu d-md-none" :class="{ 'is-active': drawer }" @click="drawer = !drawer">
         <span></span>
         <span></span>
         <span></span>
