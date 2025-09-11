@@ -1,1 +1,0 @@
-- [x] Update submitStep3 method in ContactView.vue to add page reload after form submission success
