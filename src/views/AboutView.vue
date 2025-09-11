@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <v-row justify="center" align="center" class="hero-section">
       <v-col cols="12" md="7">
-        <h1 class="hero-title">About Accurx</h1>
+        <h1 class="hero-title">Shubh Marketing</h1>
         <p class="hero-subtitle">
           Leading provider of high-quality ceramic tiles for residential and commercial projects.
         </p>

@@ -22,8 +22,7 @@ export default {
         <div class="hero-content">
           <h1 class="hero-title">Elevate Your Space with Premium Flooring Solutions</h1>
           <p class="hero-subtitle">
-            Discover high-quality, durable, and aesthetically pleasing flooring options for every
-            environment.
+            Discover high-quality, durable, and aesthetically pleasing flooring options for your Dream House.
           </p>
         </div>
         <router-link to="/contact" class="professional-button"> contact us </router-link>
