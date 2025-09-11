@@ -38,7 +38,7 @@ export default {
   gap: 2rem;
   margin: 10px 10px 30px 10px;
   padding: 1rem;
-  background: rgba(26, 26, 26, 0.242);
+  background: rgba(25, 118, 210, 0.05);
   border-radius: 8px;
 }
 
@@ -53,7 +53,7 @@ export default {
   left: 30px;
   right: 30px;
   height: 2.5px;
-  background-color: #ffffff;
+  background-color: #1976D2;
   z-index: 1;
 }
 
@@ -70,8 +70,8 @@ export default {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #1976D2;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,27 +80,27 @@ export default {
 }
 
 .timeline-step.active .timeline-circle {
-  background-color: #0d6efd;
+  background-color: #1565C0;
 }
 
 .timeline-step.completed .timeline-circle {
-  background-color: #28a745;
+  background-color: #4CAF50;
 }
 
 .timeline-label {
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 
 .timeline-step.active .timeline-label {
-  color: #0d6efd;
+  color: #1565C0;
   font-weight: bold;
 }
 
 .timeline-step.completed .timeline-label {
-  color: #28a745;
+  color: #4CAF50;
 }
 
 /* @media (max-width: 768px) {

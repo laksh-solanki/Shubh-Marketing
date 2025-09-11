@@ -15,7 +15,11 @@
                 (v) => !!v || 'Email is required',
                 (v) => /.+@.+\..+/.test(v) || 'Email must be valid',
               ]" required outlined dense class="mb-3" clearable />
-              <v-text-field v-model="form.phone" label="Phone" :rules="[(v) => !!v || 'Phone number is required']"
+              <v-text-field v-model="form.phone" label="Phone" :rules="[
+                (v) => !!v || 'Phone number is required',
+                (v) => /^\d{10}$/.test(v) || 'Phone must be 10 digits',
+              ]" required outlined dense class="mb-3" clearable />
+              <v-text-field v-model="form.subject" label="Subject" :rules="[(v) => !!v || 'Subject is required']"
                 required outlined dense class="mb-3" clearable />
               <v-btn :loading="loading" type="submit" color="primary" class="mt-4">Next</v-btn>
             </form>
@@ -144,8 +148,9 @@ export default {
     const form = ref({
       name: '',
       email: '',
-      message: '',
       phone: '',
+      subject: '',
+      message: '',
       Address: '',
     })
     const touchStartX = ref(0)
@@ -212,6 +217,9 @@ export default {
       } else if (!form.value.phone || !/^\d{10}$/.test(form.value.phone)) {
         alert('Please enter a valid 10-digit phone number')
         return false
+      } else if (!form.value.subject) {
+        alert('Please enter Subject')
+        return false
       }
       return true
     }
@@ -224,30 +232,23 @@ export default {
       currentStep.value = 2
     }
 
-    const submitStep3 = async () => {
+    const submitStep3 = () => {
       if (!form.value.Address) {
-        alert('Please enter a Address.')
+        alert('Please enter an Address.')
         return
       }
       loading.value = true
-      try {
-        await fetch(
-          'https://script.google.com/macros/s/AKfycbxUzeCUDobbTZst7MBVv2Ni4u5y2crybrWdzI-84r9ivhN1AVWEMdeDAR1AAlWu914w/exec',
-          {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(form.value),
-          },
-        )
-        form.value = { name: '', email: '', message: '', phone: '', Address: '' }
+      // Simulate submission delay
+      setTimeout(() => {
+        form.value = { name: '', email: '', phone: '', subject: '', message: '', Address: '' }
         currentStep.value = 0
         successRef.value?.showSnackbar()
-      } catch (err) {
-        unsuccessRef.value?.showSnackbar()
-      } finally {
         loading.value = false
-      }
+        // Reload the page after a delay to allow success message to show
+        setTimeout(() => {
+          window.location.reload()
+        }, 2000) // 2 second delay before reload
+      }, 1000) // 1 second delay to simulate
     }
 
     return {
