@@ -55,7 +55,8 @@
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title>Address:</v-list-item-title>
-                  <v-list-item-subtitle>123 Tile Street, Flooring City, FC 12345</v-list-item-subtitle>
+                  <v-list-item-subtitle>Shakti Chambers-1 , Shop No. 65 , 8-A, National Highway, Opp. HDFC Bank, MORBI
+                    -363642, Gujarat, INDIA.</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
               <v-list-item class="mb-2">
@@ -64,7 +65,7 @@
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title>Phone:</v-list-item-title>
-                  <v-list-item-subtitle>+1 (123) 456-7890</v-list-item-subtitle>
+                  <v-list-item-subtitle>+91 98253 20076</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
               <v-list-item class="mb-2">
@@ -73,16 +74,7 @@
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title>Email:</v-list-item-title>
-                  <v-list-item-subtitle>info@yourtilecompany.com</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon color="primary" size="large">mdi-clock-outline</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Hours:</v-list-item-title>
-                  <v-list-item-subtitle>Mon - Fri: 9:00 AM - 5:00 PM</v-list-item-subtitle>
+                  <v-list-item-subtitle>tejvpatel1008@gmail.com</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
             </v-list>
@@ -334,6 +326,11 @@ export default {
 
 .sliding-out {
   animation: slideOut 0.3s forwards;
+}
+
+.v-list-item--one-line .v-list-item-subtitle {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
 }
 
 @keyframes slideOut {

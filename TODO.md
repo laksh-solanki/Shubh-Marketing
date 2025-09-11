@@ -1,4 +1,0 @@
-- [x] Update ContactView.vue template to use v-row and v-col for grid layout
-- [x] Remove grid-related CSS from .contact-page, .form-section, .info-section
-- [x] Add responsive breakpoints for mobile, tablet, computer screens
-- [x] Verify layout renders correctly
