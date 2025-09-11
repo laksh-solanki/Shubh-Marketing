@@ -39,7 +39,7 @@ const cards = [
     Size: '200 × 200',
   },
   {
-    imageSrc: '/Photos/Til-2.avif',
+    imageSrc: '/Photos/Til-2.png',
     title: 'Durable floor Porcelain Tiles',
     description: 'Floor',
     Instock: 'In Stock',
@@ -95,7 +95,7 @@ const cards = [
     Size: '200 × 200',
   },
   {
-    imageSrc: '/Photos/Til-9.avif',
+    imageSrc: '/Photos/Til-9.png',
     title: 'Sleek Glass wall Tiles',
     description: 'Wall',
     Instock: 'In Stock',
@@ -103,7 +103,7 @@ const cards = [
     Size: '10 × 10',
   },
   {
-    imageSrc: '/Photos/Til-10.avif',
+    imageSrc: '/Photos/Til-10.png',
     title: 'Textured Concrete Tiles',
     description: 'Floor',
     Instock: 'In Stock',
@@ -111,7 +111,7 @@ const cards = [
     Size: '200 × 200',
   },
   {
-    imageSrc: '/Photos/Til-13.avif',
+    imageSrc: '/Photos/Til-13.png',
     title: 'Patterned Cement Tiles',
     description: 'Floor',
     Instock: 'In Stock',

@@ -37,7 +37,7 @@ export default {
           description: 'Timeless elegance for modern spaces.',
         },
         {
-          src: '/Photos/Til-2.avif',
+          src: '/Photos/Til-2.png',
           alt: 'Elegant Ceramic Tile 2',
           title: 'Subtle Gray',
           description: 'Versatile and sophisticated design.',

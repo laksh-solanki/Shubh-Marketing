@@ -6,37 +6,81 @@ export default {
   components: {
     TileCard,
   },
+  data() {
+    return {
+      slides: [
+        {
+          img: '/Photos/Til-1.jpeg',
+          title: 'Elevate Your Space with Premium Flooring',
+          subtitle: 'Transform your home with our exquisite collection of tiles'
+        },
+        {
+          img: '/Photos/Til-2.png',
+          title: 'Premium Quality Materials',
+          subtitle: 'Discover durability and style in every tile'
+        },
+        {
+          img: '/Photos/Til-3.webp',
+          title: 'Expert Installation Services',
+          subtitle: 'Professional installation by certified experts'
+        }
+      ]
+    }
+  }
 }
 </script>
 
 <template>
   <div class="professional-container">
-    <!-- Hero Section -->
-    <v-parallax
-      src="https://media.istockphoto.com/id/1312314989/vector/white-metro-tiles-seamless-background-subway-brick-horizontal-pattern-for-kitchen-bathroom.jpg?s=612x612&w=0&k=20&c=IW3b5rLojeThvsgWJP5awMQ8uBjHsYbZOlTHFglytcY="
-      class="sec" height="665" width="1600">
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">Elevate Your Space with Premium Flooring Solutions</h1>
-          <p class="hero-subtitle">
-            Discover high-quality, durable, and aesthetically pleasing flooring options for your Dream House.
-          </p>
-        </div>
-        <router-link to="/contact" class="professional-button"> contact us </router-link>
-      </section>
-    </v-parallax>
+    <!-- Interactive Hero Section -->
+    <section class="hero-container">
+      <v-carousel cycle height="665" hide-delimiter-background show-arrows="hover" interval="4000">
+        <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.img" cover>
+          <div class="hero-overlay">
+            <div class="hero-content">
+              <v-slide-y-transition>
+                <h1 class="hero-title">{{ slide.title }}</h1>
+              </v-slide-y-transition>
+              <v-slide-y-transition>
+                <p class="hero-subtitle">{{ slide.subtitle }}</p>
+              </v-slide-y-transition>
+              <v-slide-y-transition>
+                <div class="hero-buttons">
+                  <router-link to="/contact" class="professional-button">
+                    Contact Us
+                  </router-link>
+                  <router-link to="/services" class="professional-button outline">
+                    Our Services
+                  </router-link>
+                </div>
+              </v-slide-y-transition>
+            </div>
+          </div>
+        </v-carousel-item>
+      </v-carousel>
+    </section>
 
     <!-- Tile Types Section -->
     <section class="tiles-section">
       <h2 class="section-title">Our Diverse Flooring Collections</h2>
       <v-row justify="center" align="stretch" dense>
         <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
-          <TileCard v-if="index === 0" imageSrc="/Photos/Til-1.jpeg" title="Elegant Ceramic Tiles"
+          <TileCard v-if="index === 0" imageSrc="/Photos/Til-6.webp" title="Elegant Ceramic Tiles"
             description="Versatile and robust, ideal for both residential and commercial applications."
             price="$2.50/sq ft" />
-          <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-2.avif" title="Durable Porcelain Tiles"
+          <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-10.png" title="Durable Porcelain Tiles"
             description="Highly resistant to wear and moisture, perfect for high-traffic areas." price="$3.00/sq ft" />
-          <TileCard v-else imageSrc="/Photos/Til-3.webp" title="Comfortable Vinyl Flooring"
+          <TileCard v-else imageSrc="/Photos/Til-13.png" title="Comfortable Vinyl Flooring"
+            description="Affordable, easy to maintain, and comfortable underfoot price and design."
+            price="$1.75/sq ft" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
+          <TileCard v-if="index === 0" imageSrc="/Photos/Til-7.jpg" title="Elegant Ceramic Tiles"
+            description="Versatile and robust, ideal for both residential and commercial applications."
+            price="$2.50/sq ft" />
+          <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-1.jpeg" title="Durable Porcelain Tiles"
+            description="Highly resistant to wear and moisture, perfect for high-traffic areas." price="$3.00/sq ft" />
+          <TileCard v-else imageSrc="/Photos/Til-5.jpg" title="Comfortable Vinyl Flooring"
             description="Affordable, easy to maintain, and comfortable underfoot price and design."
             price="$1.75/sq ft" />
         </v-col>
@@ -80,9 +124,8 @@ export default {
 /* Global Section Styling */
 section {
   background-color: #2c3e50;
-  /* Dark blue-gray background */
   margin-bottom: 5rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -101,23 +144,31 @@ section {
 }
 
 /* Hero Section */
-.hero-section {
+.hero-container {
+  background-color:transparent !important;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 0%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  text-align: start;
-  min-height: 82vh;
-  background-color: transparent;
-  color: #000000;
-  border-radius: 8px;
-  margin-bottom: 4rem;
-  box-shadow: none;
+  text-align: center;
+  padding: 2rem;
 }
 
 .hero-content {
   max-width: 800px;
-  padding: 1rem;
+  color: white;
+  z-index: 1;
 }
 
 .hero-title {
@@ -125,44 +176,41 @@ section {
   font-weight: bold;
   margin-bottom: 1rem;
   line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 .professional-button {
   border-radius: 50px;
-  box-shadow:
-    inset 4px 4px 10px #bcbcbc,
-    inset -4px -4px 10px #ffffff;
+  background: white;
   color: #2f2f2f;
   cursor: pointer;
   font-size: 18px;
   padding: 15px 40px;
+  margin: auto;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  border: 2px solid rgb(22, 22, 22);
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.professional-button.outline {
+  background: transparent;
+  color: white;
 }
 
 .professional-button:hover {
-  box-shadow:
-    inset 2px 2px 5px #bcbcbc,
-    inset -2px -2px 5px #ffffff,
-    2px 2px 5px #bcbcbc,
-    -2px -2px 5px #ffffff;
-}
-
-.professional-button:focus {
-  outline: none;
-  box-shadow:
-    inset 2px 2px 5px #bcbcbc,
-    inset -2px -2px 5px #ffffff,
-    2px 2px 5px #bcbcbc,
-    -2px -2px 5px #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .tiles-section {
@@ -183,6 +231,7 @@ section {
   border-radius: 8px;
   height: 250px;
   align-content: center;
+  text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition:
     transform 0.3s ease,
