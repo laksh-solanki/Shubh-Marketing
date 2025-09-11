@@ -6,41 +6,41 @@ const tileCategories = ref([
   {
     name: 'Ceramic Tiles',
     image: './Photos/Til-2.png',
-    description: 'Durable and versatile tiles perfect for indoor applications'
+    description: 'Durable and versatile tiles perfect for indoor applications',
   },
   {
     name: 'Porcelain Tiles',
     image: './Photos/Til-3.webp',
-    description: 'Premium quality tiles suitable for both indoor and outdoor use'
+    description: 'Premium quality tiles suitable for both indoor and outdoor use',
   },
   {
     name: 'Designer Tiles',
     image: './Photos/Til-4.jpg',
-    description: 'Exclusive patterns and designs for unique spaces and versatile tiles'
-  }
+    description: 'Exclusive patterns and designs for unique spaces and versatile tiles',
+  },
 ])
 
 const installationSteps = ref([
   {
     title: 'Consultation',
     description: 'Free site visit and requirements analysis',
-    color: 'primary'
+    color: 'primary',
   },
   {
     title: 'Planning',
     description: 'Detailed layout and material planning',
-    color: 'info'
+    color: 'info',
   },
   {
     title: 'Installation',
     description: 'Professional installation by certified experts',
-    color: 'success'
+    color: 'success',
   },
   {
     title: 'Quality Check',
     description: 'Final inspection and quality assurance',
-    color: 'warning'
-  }
+    color: 'warning',
+  },
 ])
 
 defineOptions({
@@ -138,7 +138,6 @@ defineOptions({
     </v-row>
   </div>
 </template>
-
 
 <style scoped>
 .about-page {

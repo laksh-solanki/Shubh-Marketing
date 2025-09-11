@@ -41,8 +41,8 @@ const quickLinks = [
         <v-col cols="12" md="4" class="px-4">
           <h3 class="text-h6 mb-3">About Us</h3>
           <p class="text-body-2">
-            We are committed to providing exceptional services and solutions to our customers.
-            Our mission is to deliver excellence in every project we undertake.
+            We are committed to providing exceptional services and solutions to our customers. Our
+            mission is to deliver excellence in every project we undertake.
           </p>
         </v-col>
 
@@ -74,7 +74,8 @@ const quickLinks = [
             </p>
             <p class="d-flex align-start text-start lh-2 mb-2">
               <v-icon size="small" class="mr-2">mdi-map-marker</v-icon>
-              Shakti Chambers-1, Shop No. 65, 8-A, National Highway, Opp. HDFC Bank, MORBI -363642. (Guj.) INDIA.
+              Shakti Chambers-1, Shop No. 65, 8-A, National Highway, Opp. HDFC Bank, MORBI -363642.
+              (Guj.) INDIA.
             </p>
           </div>
         </v-col>
@@ -97,7 +98,8 @@ const quickLinks = [
       <div class="text-center text-body-2">
         © {{ new Date().getFullYear() }} <strong>Shubh Marketing</strong>. All rights reserved.
         <div class="mt-1">
-          <router-link to="/privacy" class="text-decoration-none mr-2">Privacy Policy</router-link> |
+          <router-link to="/privacy" class="text-decoration-none mr-2">Privacy Policy</router-link>
+          |
           <router-link to="/terms" class="text-decoration-none mx-2">Terms of Service</router-link>
         </div>
       </div>

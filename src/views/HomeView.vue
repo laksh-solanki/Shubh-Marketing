@@ -12,21 +12,21 @@ export default {
         {
           img: '/Photos/Til-1.jpeg',
           title: 'Elevate Your Space with Premium Flooring',
-          subtitle: 'Transform your home with our exquisite collection of tiles'
+          subtitle: 'Transform your home with our exquisite collection of tiles',
         },
         {
           img: '/Photos/Til-2.png',
           title: 'Premium Quality Materials',
-          subtitle: 'Discover durability and style in every tile'
+          subtitle: 'Discover durability and style in every tile',
         },
         {
           img: '/Photos/Til-3.webp',
           title: 'Expert Installation Services',
-          subtitle: 'Professional installation by certified experts'
-        }
-      ]
+          subtitle: 'Professional installation by certified experts',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 
@@ -46,9 +46,7 @@ export default {
               </v-slide-y-transition>
               <v-slide-y-transition>
                 <div class="hero-buttons">
-                  <router-link to="/contact" class="professional-button">
-                    Contact Us
-                  </router-link>
+                  <router-link to="/contact" class="professional-button"> Contact Us </router-link>
                   <router-link to="/services" class="professional-button outline">
                     Our Services
                   </router-link>
@@ -296,7 +294,7 @@ section {
 }
 
 .feature-card h3 {
-  color: #1976D2;
+  color: #1976d2;
   margin-bottom: 1rem;
   font-size: 1.4rem;
   font-weight: 600;
@@ -314,7 +312,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(145deg, #1976D2, #1565C0);
+  background: linear-gradient(145deg, #1976d2, #1565c0);
   display: flex;
   align-items: center;
   justify-content: center;
