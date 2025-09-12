@@ -162,8 +162,6 @@ section {
   color: #2f2f2f;
   margin-bottom: 5rem;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .section-title {
