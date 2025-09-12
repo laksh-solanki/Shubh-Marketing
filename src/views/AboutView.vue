@@ -149,8 +149,6 @@ defineOptions({
   color: white;
   padding: 100px 0;
   text-align: center;
-  margin: 1rem;
-  margin-bottom: 2rem;
   border-radius: 12px;
 }
 

@@ -34,7 +34,7 @@ export default {
   <div class="professional-container">
     <!-- Interactive Hero Section -->
     <section class="hero-container">
-      <v-carousel cycle height="665" hide-delimiter-background show-arrows="hover" interval="4000">
+      <v-carousel cycle height="665" hide-delimiters show-arrows="hover" interval="4000">
         <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.img" cover>
           <div class="hero-overlay">
             <div class="hero-content">
