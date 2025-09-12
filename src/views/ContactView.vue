@@ -209,16 +209,16 @@ export default {
 
     const validateStep1 = () => {
       if (!form.value.name) {
-        alert('Please enter Name')
+        unsuccessRef.value?.showSnackbar()
         return false
       } else if (!form.value.email || !/.+@.+\..+/.test(form.value.email)) {
-        alert('Please enter valid email')
+        unsuccessRef.value?.showSnackbar()
         return false
       } else if (!form.value.phone || !/^\d{10}$/.test(form.value.phone)) {
-        alert('Please enter a valid 10-digit phone number')
+        unsuccessRef.value?.showSnackbar()
         return false
       } else if (!form.value.subject) {
-        alert('Please enter Subject')
+        unsuccessRef.value?.showSnackbar()
         return false
       }
       return true
@@ -226,7 +226,7 @@ export default {
 
     const submitStep2 = () => {
       if (!form.value.message) {
-        alert('Please enter a message.')
+        unsuccessRef.value?.showSnackbar()
         return
       }
       currentStep.value = 2
@@ -234,7 +234,7 @@ export default {
 
     const submitStep3 = () => {
       if (!form.value.Address) {
-        alert('Please enter an Address.')
+        unsuccessRef.value?.showSnackbar()
         return
       }
       loading.value = true
@@ -244,7 +244,6 @@ export default {
         currentStep.value = 0
         successRef.value?.showSnackbar()
         loading.value = false
-        // Reload the page after a delay to allow success message to show
         setTimeout(() => {
           window.location.reload()
         }, 2000) // 2 second delay before reload
