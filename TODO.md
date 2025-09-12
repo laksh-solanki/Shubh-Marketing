@@ -1,0 +1,3 @@
+- [x] Add "Menu" text label next to the hamburger icon in mobile navbar
+- [x] Apply same mobile menu icon and title layout fix to TileNavbar component
+- [x] Add custom 3-line hamburger menu icon to TileNavbar

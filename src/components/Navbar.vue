@@ -15,7 +15,8 @@
           <v-tab to="/Tile" value="Tile">Tile</v-tab>
         </v-tabs>
       </div>
-      <div class="hamburger-menu d-lg-none" :class="{ 'is-active': drawer }" @click="drawer = !drawer">
+      <div class="hamburger-menu d-lg-none d-flex align-center" :class="{ 'is-active': drawer }"
+        @click="drawer = !drawer">
         <span></span>
         <span></span>
         <span></span>
@@ -26,34 +27,24 @@
   <v-navigation-drawer v-model="drawer" app temporary left>
     <v-list nav dense>
       <v-list-item to="/" @click="drawer = false">
-        <v-list-item-icon>
-          <v-icon>mdi-home</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>Home</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center "><v-icon
+            class="mr-2">mdi-home</v-icon>Home</v-list-item-title>
       </v-list-item>
       <v-list-item to="/about" @click="drawer = false">
-        <v-list-item-icon>
-          <v-icon>mdi-information-outline</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>About</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center "><v-icon
+            class="mr-2">mdi-information-outline</v-icon>About</v-list-item-title>
       </v-list-item>
       <v-list-item to="/services" @click="drawer = false">
-        <v-list-item-icon>
-          <v-icon>mdi-tools</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>Services</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center"><v-icon
+            class="mr-2">mdi-tools</v-icon>Services</v-list-item-title>
       </v-list-item>
       <v-list-item to="/contact" @click="drawer = false">
-        <v-list-item-icon>
-          <v-icon>mdi-email-outline</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>Contact</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center "><v-icon
+            class="mr-2">mdi-email-outline</v-icon>Contact</v-list-item-title>
       </v-list-item>
       <v-list-item to="/Tile" @click="drawer = false">
-        <v-list-item-icon>
-          <v-icon>mdi-view-dashboard</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>Tile</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center "><v-icon
+            class="mr-2">mdi-view-dashboard</v-icon>Tile</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
@@ -105,9 +96,12 @@ export default {
   }
 }
 
-.v-list-item-icon {
-  display: flex !important;
-  flex-direction: row !important;
+.v-list-item {
+  padding-left: 16px;  
+}
+
+.v-list-item-title{
+  font-size: medium !important;
 }
 
 .nav-link {
