@@ -23,6 +23,7 @@ const quickLinks = [
   { title: 'About', path: '/about', icon: 'mdi-information' },
   { title: 'Services', path: '/services', icon: 'mdi-briefcase' },
   { title: 'Contact', path: '/contact', icon: 'mdi-phone' },
+  { title: 'Tile', path: '/Tile', icon: 'mdi-view-dashboard' },
 ]
 </script>
 
@@ -49,7 +50,7 @@ const quickLinks = [
         <!-- Quick Links -->
         <v-col cols="12" md="4" class="px-4">
           <h3 class="text-h6 mb-3">Quick Links</h3>
-          <v-list density="compact" class="transparent">
+          <v-list density="comfortable" class="transparent p-0">
             <v-list-item v-for="(link, index) in quickLinks" :key="index" :to="link.path"
               class="px-2 rounded rounded-4 hoverable">
               <template v-slot:prepend>

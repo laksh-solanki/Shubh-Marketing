@@ -1,23 +1,23 @@
 <template>
-  <div class="slider-wrapper rounded" @mouseenter="pauseAutoPlay" @mouseleave="startAutoPlay" elevation-20>
+  <div class="slider-wrapper rounded-5" @mouseenter="pauseAutoPlay" @mouseleave="startAutoPlay" elevation-20>
     <v-card-title class="text-h3 text-center">Featured Tiles</v-card-title>
     <div class="slider-container" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
       <div class="slider-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
         <div v-for="(tile, index) in tiles" :key="index" class="slider-slide">
-          <div class="slide-content">
+          <v-card class="slide-content" elevation="8">
             <img :src="tile.src" :alt="tile.alt" />
             <div class="slide-info">
               <h3>{{ tile.title }}</h3>
               <p>{{ tile.description }}</p>
             </div>
-          </div>
+          </v-card>
         </div>
       </div>
     </div>
-    <div class="slider-indicators">
+    <!-- <div class="slider-indicators">
       <span v-for="(tile, index) in tiles" :key="index" class="indicator" :class="{ active: index === currentIndex }"
         @click="goToSlide(index)"></span>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -139,12 +139,14 @@ export default {
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
+  padding: 1rem;
 }
 
 .slider-container {
   width: 100%;
   height: 500px;
   overflow: hidden;
+  padding: 1rem;
   position: relative;
 }
 
@@ -166,14 +168,14 @@ export default {
 .slide-content {
   width: 80%;
   max-width: 400px;
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
   backdrop-filter: blur(10px);
 }
 

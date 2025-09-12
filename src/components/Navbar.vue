@@ -6,7 +6,7 @@
             alt="Shubh marketing" /></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <div class="d-none d-md-flex align-center">
+      <div class="d-none d-lg-flex align-center">
         <v-tabs v-model="activeTab" :show-arrows="false" class="w-100">
           <v-tab to="/" value="home">Home</v-tab>
           <v-tab to="/about" value="about">About</v-tab>
@@ -15,7 +15,7 @@
           <v-tab to="/Tile" value="Tile">Tile</v-tab>
         </v-tabs>
       </div>
-      <div class="hamburger-menu d-md-none" :class="{ 'is-active': drawer }" @click="drawer = !drawer">
+      <div class="hamburger-menu d-lg-none" :class="{ 'is-active': drawer }" @click="drawer = !drawer">
         <span></span>
         <span></span>
         <span></span>
@@ -103,6 +103,11 @@ export default {
     max-width: 100%;
     height: auto;
   }
+}
+
+.v-list-item-icon {
+  display: flex !important;
+  flex-direction: row !important;
 }
 
 .nav-link {

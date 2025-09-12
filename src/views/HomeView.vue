@@ -59,28 +59,24 @@ export default {
     </section>
 
     <!-- Tile Types Section -->
-    <section class="tiles-section">
+    <section class="tiles-section m-3">
       <h2 class="section-title">Our Diverse Flooring Collections</h2>
       <v-row justify="center" align="stretch" dense>
         <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
           <TileCard v-if="index === 0" imageSrc="/Photos/Til-6.webp" title="Elegant Ceramic Tiles"
-            description="Versatile and robust, ideal for both residential and commercial applications."
-            price="$2.50/sq ft" />
+            description="Versatile and robust, ideal for both residential and commercial applications." />
           <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-10.png" title="Durable Porcelain Tiles"
-            description="Highly resistant to wear and moisture, perfect for high-traffic areas." price="$3.00/sq ft" />
+            description="Highly resistant to wear and moisture, perfect for high-traffic areas." />
           <TileCard v-else imageSrc="/Photos/Til-13.png" title="Comfortable Vinyl Flooring"
-            description="Affordable, easy to maintain, and comfortable underfoot price and design."
-            price="$1.75/sq ft" />
+            description="Affordable, easy to maintain, and comfortable underfoot price and design." />
         </v-col>
         <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
           <TileCard v-if="index === 0" imageSrc="/Photos/Til-7.jpg" title="Elegant Ceramic Tiles"
-            description="Versatile and robust, ideal for both residential and commercial applications."
-            price="$2.50/sq ft" />
+            description="Versatile and robust, ideal for both residential and commercial applications." />
           <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-1.jpeg" title="Durable Porcelain Tiles"
-            description="Highly resistant to wear and moisture, perfect for high-traffic areas." price="$3.00/sq ft" />
+            description="Highly resistant to wear and moisture, perfect for high-traffic areas." />
           <TileCard v-else imageSrc="/Photos/Til-5.jpg" title="Comfortable Vinyl Flooring"
-            description="Affordable, easy to maintain, and comfortable underfoot price and design."
-            price="$1.75/sq ft" />
+            description="Affordable, easy to maintain, and comfortable underfoot price and design." />
         </v-col>
       </v-row>
     </section>
@@ -90,7 +86,7 @@ export default {
       <h2 class="section-title">Why Partner with Us?</h2>
       <v-row justify="center" align="stretch" dense>
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <div class="feature-card">
+          <v-card class="feature-card" elevation="2">
             <div class="feature-icon">
               <v-icon size="48" color="primary">mdi-shield-check</v-icon>
             </div>
@@ -106,11 +102,11 @@ export default {
                 </ul>
               </div>
             </div>
-          </div>
+          </v-card>
         </v-col>
 
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <div class="feature-card">
+          <v-card class="feature-card" elevation="2">
             <div class="feature-icon">
               <v-icon size="48" color="primary">mdi-tools</v-icon>
             </div>
@@ -126,11 +122,11 @@ export default {
                 </ul>
               </div>
             </div>
-          </div>
+          </v-card>
         </v-col>
 
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <div class="feature-card">
+          <v-card class="feature-card" elevation="3">
             <div class="feature-icon">
               <v-icon size="48" color="primary">mdi-heart</v-icon>
             </div>
@@ -146,7 +142,7 @@ export default {
                 </ul>
               </div>
             </div>
-          </div>
+          </v-card>
         </v-col>
       </v-row>
     </section>
@@ -162,7 +158,8 @@ export default {
 
 /* Global Section Styling */
 section {
-  background-color: #2c3e50;
+  /* background-color: #2c3e50; */
+  color: #2f2f2f;
   margin-bottom: 5rem;
   padding: 1rem;
   border-radius: 8px;
@@ -173,8 +170,6 @@ section {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2.9rem;
-  color: #e4e8ec;
-  /* Dark blue-gray for titles */
   font-weight: 700;
 }
 
@@ -252,10 +247,6 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.tiles-section {
-  margin: 1rem;
-}
-
 /* Why Choose Us Section */
 .why-choose-us-section {
   height: 100%;
@@ -274,10 +265,6 @@ section {
   text-align: center;
   overflow: hidden;
   transition: all 0.4s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
 }
 
 .feature-icon {

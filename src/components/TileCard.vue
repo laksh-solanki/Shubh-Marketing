@@ -6,9 +6,6 @@
       <h5 class="card-title" @click="copyTitle(title)">{{ title }}</h5>
       <p class="card-text">{{ description }}</p>
       <transition name="fade">
-        <span v-if="isHovered" class="price-tag">{{ price }}</span>
-      </transition>
-      <transition name="fade">
         <span v-if="showCopiedMessage" class="copied-message">Copied!</span>
       </transition>
     </div>
@@ -28,10 +25,6 @@ export default {
       required: true,
     },
     description: {
-      type: String,
-      required: true,
-    },
-    price: {
       type: String,
       required: true,
     },
@@ -83,8 +76,8 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.855);
+    color: rgb(0, 0, 0);
     padding: 1rem;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -106,7 +99,7 @@ export default {
 }
 
 .card:hover .card-img-top {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .card:hover .card-body {
@@ -116,18 +109,6 @@ export default {
 .card:hover .card-title,
 .card:hover .card-text {
   transform: translateY(0);
-}
-
-.price-tag {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.327);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 .copied-message {
