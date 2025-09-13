@@ -2,8 +2,9 @@
   <v-app-bar app height="70" light elevation="2">
     <v-container class="d-flex align-center">
       <v-toolbar-title>
-        <router-link class="navbar-brand w-100" to="/"><img src="@/assets/Main_logo.jpeg" class="rounded-4" width="110"
-            alt="Shubh marketing" /></router-link>
+        <router-link class="navbar-brand w-100" to="/"
+          ><img src="@/assets/Main_logo.jpeg" class="rounded-4" width="110" alt="Shubh marketing"
+        /></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="d-none d-lg-flex align-center">
@@ -15,8 +16,11 @@
           <v-tab to="/Tile" value="Tile">Tile</v-tab>
         </v-tabs>
       </div>
-      <div class="hamburger-menu d-lg-none d-flex align-center" :class="{ 'is-active': drawer }"
-        @click="drawer = !drawer">
+      <div
+        class="hamburger-menu d-lg-none d-flex align-center"
+        :class="{ 'is-active': drawer }"
+        @click="drawer = !drawer"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -27,24 +31,29 @@
   <v-navigation-drawer v-model="drawer" app temporary left>
     <v-list nav dense>
       <v-list-item to="/" @click="drawer = false">
-        <v-list-item-title class="d-flex flex-row align-center "><v-icon
-            class="mr-2">mdi-home</v-icon>Home</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center"
+          ><v-icon class="mr-2">mdi-home</v-icon>Home</v-list-item-title
+        >
       </v-list-item>
       <v-list-item to="/about" @click="drawer = false">
-        <v-list-item-title class="d-flex flex-row align-center "><v-icon
-            class="mr-2">mdi-information-outline</v-icon>About</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center"
+          ><v-icon class="mr-2">mdi-information-outline</v-icon>About</v-list-item-title
+        >
       </v-list-item>
       <v-list-item to="/services" @click="drawer = false">
-        <v-list-item-title class="d-flex flex-row align-center"><v-icon
-            class="mr-2">mdi-tools</v-icon>Services</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center"
+          ><v-icon class="mr-2">mdi-tools</v-icon>Services</v-list-item-title
+        >
       </v-list-item>
       <v-list-item to="/contact" @click="drawer = false">
-        <v-list-item-title class="d-flex flex-row align-center "><v-icon
-            class="mr-2">mdi-email-outline</v-icon>Contact</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center"
+          ><v-icon class="mr-2">mdi-email-outline</v-icon>Contact</v-list-item-title
+        >
       </v-list-item>
       <v-list-item to="/Tile" @click="drawer = false">
-        <v-list-item-title class="d-flex flex-row align-center "><v-icon
-            class="mr-2">mdi-view-dashboard</v-icon>Tile</v-list-item-title>
+        <v-list-item-title class="d-flex flex-row align-center"
+          ><v-icon class="mr-2">mdi-view-dashboard</v-icon>Tile</v-list-item-title
+        >
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
@@ -68,7 +77,7 @@ export default {
       get() {
         return this.$route.path.substring(1) || 'home'
       },
-      set() { },
+      set() {},
     },
     isMobile() {
       return this.$vuetify.display.mdAndDown
@@ -97,10 +106,10 @@ export default {
 }
 
 .v-list-item {
-  padding-left: 16px;  
+  padding-left: 16px;
 }
 
-.v-list-item-title{
+.v-list-item-title {
   font-size: medium !important;
 }
 

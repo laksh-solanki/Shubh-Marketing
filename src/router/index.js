@@ -37,7 +37,7 @@ const router = createRouter({
 })
 
 router.afterEach((to, from) => {
-  document.title = to.meta.title || 'Accurx App'
+  document.title = to.meta.title || 'Shubh Marketing App'
   window.scrollTo(0, 0)
 })
 

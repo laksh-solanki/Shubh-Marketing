@@ -1,10 +1,10 @@
 <script>
-import TileCard from '../components/TileCard.vue'
+import HomeTileCard from '../components/HomeTileCard.vue'
 
 export default {
   name: 'HomePage',
   components: {
-    TileCard,
+    HomeTileCard,
   },
   data() {
     return {
@@ -63,20 +63,44 @@ export default {
       <h2 class="section-title">Our Diverse Flooring Collections</h2>
       <v-row justify="center" align="stretch" dense>
         <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
-          <TileCard v-if="index === 0" imageSrc="/Photos/Til-6.webp" title="Elegant Ceramic Tiles"
-            description="Versatile and robust, ideal for both residential and commercial applications." />
-          <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-10.png" title="Durable Porcelain Tiles"
-            description="Highly resistant to wear and moisture, perfect for high-traffic areas." />
-          <TileCard v-else imageSrc="/Photos/Til-13.png" title="Comfortable Vinyl Flooring"
-            description="Affordable, easy to maintain, and comfortable underfoot price and design." />
+          <HomeTileCard
+            v-if="index === 0"
+            imageSrc="/Photos/Til-6.webp"
+            title="Elegant Ceramic Tiles"
+            description="Versatile and robust, ideal for both residential and commercial applications."
+          />
+          <HomeTileCard
+            v-else-if="index === 1"
+            imageSrc="/Photos/Til-10.png"
+            title="Durable Porcelain Tiles"
+            description="Highly resistant to wear and moisture, perfect for high-traffic areas."
+          />
+          <HomeTileCard
+            v-else
+            imageSrc="/Photos/Til-13.png"
+            title="Comfortable Vinyl Flooring"
+            description="Affordable, easy to maintain, and comfortable underfoot price and design."
+          />
         </v-col>
         <v-col cols="12" sm="6" md="4" lg="4" xl="3" v-for="(tile, index) in 3" :key="index">
-          <TileCard v-if="index === 0" imageSrc="/Photos/Til-7.jpg" title="Elegant Ceramic Tiles"
-            description="Versatile and robust, ideal for both residential and commercial applications." />
-          <TileCard v-else-if="index === 1" imageSrc="/Photos/Til-1.jpeg" title="Durable Porcelain Tiles"
-            description="Highly resistant to wear and moisture, perfect for high-traffic areas." />
-          <TileCard v-else imageSrc="/Photos/Til-5.jpg" title="Comfortable Vinyl Flooring"
-            description="Affordable, easy to maintain, and comfortable underfoot price and design." />
+          <HomeTileCard
+            v-if="index === 0"
+            imageSrc="/Photos/Til-7.jpg"
+            title="Elegant Ceramic Tiles"
+            description="Versatile and robust, ideal for both residential and commercial applications."
+          />
+          <HomeTileCard
+            v-else-if="index === 1"
+            imageSrc="/Photos/Til-1.jpeg"
+            title="Durable Porcelain Tiles"
+            description="Highly resistant to wear and moisture, perfect for high-traffic areas."
+          />
+          <HomeTileCard
+            v-else
+            imageSrc="/Photos/Til-5.jpg"
+            title="Comfortable Vinyl Flooring"
+            description="Affordable, easy to maintain, and comfortable underfoot price and design."
+          />
         </v-col>
       </v-row>
     </section>

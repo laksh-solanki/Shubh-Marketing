@@ -1,8 +1,12 @@
 <template>
   <div class="timeline-container">
     <div class="timeline">
-      <div v-for="(step, index) in steps" :key="index" class="timeline-step"
-        :class="{ active: index <= currentStep, completed: index < currentStep }">
+      <div
+        v-for="(step, index) in steps"
+        :key="index"
+        class="timeline-step"
+        :class="{ active: index <= currentStep, completed: index < currentStep }"
+      >
         <div class="timeline-circle">{{ index + 1 }}</div>
         <div class="timeline-label">{{ step.label }}</div>
       </div>
@@ -53,7 +57,7 @@ export default {
   left: 30px;
   right: 30px;
   height: 2.5px;
-  background-color: #1976D2;
+  background-color: #1976d2;
   z-index: 1;
 }
 
@@ -70,7 +74,7 @@ export default {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #1976D2;
+  background-color: #1976d2;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -80,11 +84,11 @@ export default {
 }
 
 .timeline-step.active .timeline-circle {
-  background-color: #1565C0;
+  background-color: #1565c0;
 }
 
 .timeline-step.completed .timeline-circle {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .timeline-label {
@@ -95,12 +99,12 @@ export default {
 }
 
 .timeline-step.active .timeline-label {
-  color: #1565C0;
+  color: #1565c0;
   font-weight: bold;
 }
 
 .timeline-step.completed .timeline-label {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 /* @media (max-width: 768px) {

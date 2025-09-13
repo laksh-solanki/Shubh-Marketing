@@ -150,7 +150,7 @@ export default {
             <v-card-text class="text-center">
               <v-icon size="64" class="service-icon mb-4" color="primary">{{
                 service.icon
-                }}</v-icon>
+              }}</v-icon>
               <h3 class="service-title">{{ service.title }}</h3>
               <p class="service-description">{{ service.description }}</p>
             </v-card-text>
@@ -167,7 +167,7 @@ export default {
           <div v-for="feature in features" :key="feature.title" class="feature-item">
             <v-icon size="48" class="feature-icon mb-3" color="secondary">{{
               feature.icon
-              }}</v-icon>
+            }}</v-icon>
             <h3 class="feature-title">{{ feature.title }}</h3>
             <p class="feature-text">{{ feature.text }}</p>
           </div>
@@ -183,7 +183,7 @@ export default {
           <div v-for="material in materials" :key="material.name" class="material-item">
             <v-icon size="40" class="material-icon mb-2" color="primary">{{
               material.icon
-              }}</v-icon>
+            }}</v-icon>
             <h4 class="material-name">{{ material.name }}</h4>
             <p class="material-description">{{ material.description }}</p>
           </div>

@@ -51,8 +51,12 @@ const quickLinks = [
         <v-col cols="12" md="4" class="px-4">
           <h3 class="text-h6 mb-3">Quick Links</h3>
           <v-list density="comfortable" class="transparent p-0">
-            <v-list-item v-for="(link, index) in quickLinks" :key="index" :to="link.path"
-              class="px-2 rounded rounded-4 hoverable">
+            <v-list-item
+              v-for="(link, index) in quickLinks"
+              :key="index"
+              :to="link.path"
+              class="px-2 rounded rounded-4 hoverable"
+            >
               <template v-slot:prepend>
                 <v-icon size="small" class="mr-2">{{ link.icon }}</v-icon>
               </template>
@@ -85,7 +89,13 @@ const quickLinks = [
       <!-- Social Media Icons -->
       <v-divider class="my-4"></v-divider>
       <div class="social-icons d-flex justify-center gap-4 my-4">
-        <a v-for="item in icons" :key="item.href" :href="item.href" target="_blank" class="social-icon-link">
+        <a
+          v-for="item in icons"
+          :key="item.href"
+          :href="item.href"
+          target="_blank"
+          class="social-icon-link"
+        >
           <v-hover v-slot="{ isHovering, props }">
             <v-btn v-bind="props" :color="isHovering ? 'primary' : 'grey'" icon variant="text">
               <font-awesome-icon :icon="item.icon" size="lg" />
