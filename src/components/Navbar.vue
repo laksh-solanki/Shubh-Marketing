@@ -28,7 +28,7 @@
     </v-container>
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" app temporary left>
+  <v-navigation-drawer v-model="drawer" app temporary right>
     <v-list nav dense>
       <v-list-item to="/" @click="drawer = false">
         <v-list-item-title class="d-flex flex-row align-center"
