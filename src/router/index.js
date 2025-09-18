@@ -16,10 +16,10 @@ const router = createRouter({
       meta: { title: 'About' },
     },
     {
-      path: '/services',
-      name: 'services',
-      component: () => import('../views/ServicesView.vue'),
-      meta: { title: 'Services' },
+      path: '/Catlogue',
+      name: 'catlogue',
+      component: () => import('../views/Cotlogueview.vue'),
+      meta: { title: 'Catlogue' },
     },
     {
       path: '/contact',

@@ -11,7 +11,7 @@
         <v-tabs v-model="activeTab" :show-arrows="false" class="w-100">
           <v-tab to="/" value="home">Home</v-tab>
           <v-tab to="/about" value="about">About</v-tab>
-          <v-tab to="/services" value="services">Services</v-tab>
+          <v-tab to="/services" value="services">Catalogue</v-tab>
           <v-tab to="/contact" value="contact">Contact</v-tab>
           <v-tab to="/Tile" value="Tile">Tile</v-tab>
         </v-tabs>
@@ -40,9 +40,9 @@
           ><v-icon class="mr-2">mdi-information-outline</v-icon>About</v-list-item-title
         >
       </v-list-item>
-      <v-list-item to="/services" @click="drawer = false">
+      <v-list-item to="/Catlogue" @click="drawer = false">
         <v-list-item-title class="d-flex flex-row align-center"
-          ><v-icon class="mr-2">mdi-tools</v-icon>Services</v-list-item-title
+          ><v-icon class="mr-2">mdi-note</v-icon>Catalogue</v-list-item-title
         >
       </v-list-item>
       <v-list-item to="/contact" @click="drawer = false">

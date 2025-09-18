@@ -21,7 +21,7 @@ const icons = [
 const quickLinks = [
   { title: 'Home', path: '/', icon: 'mdi-home' },
   { title: 'About', path: '/about', icon: 'mdi-information' },
-  { title: 'Services', path: '/services', icon: 'mdi-briefcase' },
+  { title: 'Catlogue', path: '/catlogue', icon: 'mdi-note' },
   { title: 'Contact', path: '/contact', icon: 'mdi-phone' },
   { title: 'Tile', path: '/Tile', icon: 'mdi-view-dashboard' },
 ]
@@ -31,7 +31,7 @@ const quickLinks = [
   <v-footer class="footer-container">
     <v-container>
       <!-- Logo Section -->
-      <div class="d-flex justify-space-between align-center mb-6">
+      <div class="d-flex justify-center align-center mb-6">
         <div class="footer-logo">
           <img src="@/assets/Main_logo.jpeg" alt="Shubh Marketing Logo" class="logo-image" />
         </div>
