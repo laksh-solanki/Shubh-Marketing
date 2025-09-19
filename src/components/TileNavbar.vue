@@ -55,7 +55,7 @@ export default {
 <template>
   <v-app-bar app elevation="2" height="70" light class="tile-navbar">
     <v-container class="d-flex align-center">
-      <div class="d-none d-md-flex align-center w-75">
+      <div class="d-none d-lg-flex align-center w-75">
         <!-- All Tiles Tab -->
         <v-tabs class="nav-link mx-2" :class="{ 'active-link': $route.path === '/Tile' }">
           <v-tab @click="$emit('name-selected', null)">All Tiles</v-tab>
@@ -142,7 +142,7 @@ export default {
     </v-container>
   </v-app-bar>
   <!-- Mobile Navigation Drawer -->
-  <v-navigation-drawer v-model="drawer" app temporary right>
+  <v-navigation-drawer v-model="drawer" app temporary location="left">
     <v-list nav dense :activatable="true" :active-class="'active-link'">
       <v-list-item @click="$emit('name-selected', null)">
         <v-list-item-title>All Tiles</v-list-item-title>

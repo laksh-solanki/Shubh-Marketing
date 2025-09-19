@@ -1,9 +1,6 @@
 <script>
 </script>
 <template>
-    <v-container>
-        <h1>H</h1>
-        <embed src="path/to/your/document.pdf" type="application/pdf" width="100%" height="500px">
-    </v-container>
+    <embed src="/public/PDF/PDF-1.pdf#toolbar=0&navpanes=0&scrollbar=0" style="border:none" type="application/pdf" width="100%" height="666px">
 </template>
 <style></style>
